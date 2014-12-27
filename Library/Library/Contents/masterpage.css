@@ -1,0 +1,39 @@
+﻿body {
+    margin: 0px auto;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    font-size: 12pt;
+    background-color:#ededed;
+}
+
+.container {
+    border-collapse:collapse;
+    width: 100%;
+}
+
+.banner {
+    background-color: #1E82CC;
+    height: 60px;
+}
+
+.menu {
+    height: 30px;
+    background-color: #1E82CC;
+}
+
+.leftcontent {
+    width:10px;
+}
+
+.middlecontent {
+    vertical-align: top;
+}
+
+.rightcontent {
+    width:10px;
+}
+
+
+.footer {
+    background-color:#1E82CC;
+    height: 30px;
+}

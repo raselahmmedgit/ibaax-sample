@@ -1,0 +1,41 @@
+﻿.modalajaxbackground {
+    background-color: transparent;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1001;
+    /*filter: alpha(opacity=40);*/
+    opacity: 0.5;
+}
+
+.modalajaxprogresscontainer {
+    border:10px solid #6fb6ea;
+    background-color: #ffffff;
+    position: fixed;
+    height: 150px;
+    width: 350px;
+    z-index: 2000;
+    opacity: 1.0;
+    vertical-align: middle;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
+
+    .modalajaxprogresscontainer img {
+        position:absolute;
+        top:59px;
+        left:159px;
+        height: 31px;
+        width: 31px;
+    }
+
+    .modalajaxprogresscontainer div {
+        position: absolute;
+        top:95px;        
+        width:350px;
+        text-align:center;
+    }
