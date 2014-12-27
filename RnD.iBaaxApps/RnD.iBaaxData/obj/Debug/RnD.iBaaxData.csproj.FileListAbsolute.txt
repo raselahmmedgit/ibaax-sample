@@ -1,9 +1,0 @@
-E:\RaselAhmmedBappi\Labs\RnD.iBaaxApps\RnD.iBaaxData\bin\Debug\RnD.iBaaxData.dll.config
-E:\RaselAhmmedBappi\Labs\RnD.iBaaxApps\RnD.iBaaxData\bin\Debug\RnD.iBaaxData.dll
-E:\RaselAhmmedBappi\Labs\RnD.iBaaxApps\RnD.iBaaxData\bin\Debug\RnD.iBaaxData.pdb
-E:\RaselAhmmedBappi\Labs\RnD.iBaaxApps\RnD.iBaaxData\bin\Debug\EntityFramework.dll
-E:\RaselAhmmedBappi\Labs\RnD.iBaaxApps\RnD.iBaaxData\bin\Debug\EntityFramework.SqlServer.dll
-E:\RaselAhmmedBappi\Labs\RnD.iBaaxApps\RnD.iBaaxData\bin\Debug\EntityFramework.xml
-E:\RaselAhmmedBappi\Labs\RnD.iBaaxApps\RnD.iBaaxData\bin\Debug\EntityFramework.SqlServer.xml
-E:\RaselAhmmedBappi\Labs\RnD.iBaaxApps\RnD.iBaaxData\obj\Debug\RnD.iBaaxData.dll
-E:\RaselAhmmedBappi\Labs\RnD.iBaaxApps\RnD.iBaaxData\obj\Debug\RnD.iBaaxData.pdb
