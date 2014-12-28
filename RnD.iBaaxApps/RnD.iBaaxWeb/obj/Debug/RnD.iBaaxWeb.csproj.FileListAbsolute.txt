@@ -1,0 +1,6 @@
+E:\RaselAhmmedBappi\Labs\RnD.iBaaxApps\RnD.iBaaxWeb\bin\RnD.iBaaxWeb.dll.config
+E:\RaselAhmmedBappi\Labs\RnD.iBaaxApps\RnD.iBaaxWeb\bin\RnD.iBaaxWeb.dll
+E:\RaselAhmmedBappi\Labs\RnD.iBaaxApps\RnD.iBaaxWeb\bin\RnD.iBaaxWeb.pdb
+E:\RaselAhmmedBappi\Labs\RnD.iBaaxApps\RnD.iBaaxWeb\obj\Debug\RnD.iBaaxWeb.csprojResolveAssemblyReference.cache
+E:\RaselAhmmedBappi\Labs\RnD.iBaaxApps\RnD.iBaaxWeb\obj\Debug\RnD.iBaaxWeb.dll
+E:\RaselAhmmedBappi\Labs\RnD.iBaaxApps\RnD.iBaaxWeb\obj\Debug\RnD.iBaaxWeb.pdb
