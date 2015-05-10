@@ -18,18 +18,10 @@ namespace lab.webapps.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Error()
         {
-            ViewBag.Message = "This is Rasel Ahmmed.";
-
-            return View();
+            return View("_Error");
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Rasel Ahmmed Contact No: 01911045573";
-
-            return View();
-        }
     }
 }

@@ -21,6 +21,29 @@ namespace lab.webapps.Models
         public string Url { get; set; }
     }
 
+    public class WebSiteInfo : BaseModel
+    {
+        [Key]
+        public int WebSiteInfoId { get; set; }
+
+        [DisplayName("Application Name")]
+        [Required(ErrorMessage = "Application Name is required")]
+        [MaxLength(200)]
+        public string Name { get; set; }
+
+        [DisplayName("Application Title")]
+        [Required(ErrorMessage = "Application Title is required")]
+        [MaxLength(200)]
+        public string Title { get; set; }
+
+        [DisplayName("Application Footer")]
+        [Required(ErrorMessage = "Application Footer is required")]
+        [MaxLength(200)]
+        public string Footer { get; set; }
+
+        public int WebSiteDomainId { get; set; }
+    }
+
     public class WebSitePage : BaseModel
     {
         [Key]

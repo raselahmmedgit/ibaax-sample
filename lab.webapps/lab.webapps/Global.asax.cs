@@ -12,6 +12,7 @@ namespace lab.webapps
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        private readonly log4net.ILog _logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
@@ -23,46 +24,47 @@ namespace lab.webapps
         }
         protected void Application_BeginRequest(Object sender, EventArgs e)
         {
-            //HttpApplication httpApplication = (HttpApplication)sender;
-            //HttpContext context = httpApplication.Context;
+            try
+            {
 
-            //if (context != null)
-            //{
-            //    if (context.Session == null)
-            //    {
-            //        //if (context.Session == null && context.Session["AppConstant"] == null)
-            //        //{
-            //        //}
-
-            //        string domainUrl = @"http://www.rasel.com";
-            //        string baseUrl = @"http://www.rasel.com";
-            //        //string domainUrl = @"http://www.hasib.com";
-            //        //string baseUrl = @"http://www.hasib.com";
-
-            //        //string domainUrl = context.Request.Url.Scheme + System.Uri.SchemeDelimiter + context.Request.Url.Host + (context.Request.Url.IsDefaultPort ? "" : ":" + context.Request.Url.Port);
-            //        //string baseUrl = context.Request.Url.Scheme + "://" + context.Request.Url.Authority;
-                    
-            //        string serverPath = System.Web.HttpContext.Current.Server.MapPath("~/");
-            //        AppDbContext db = new AppDbContext();
-            //        var domain = db.WebSiteDomain.FirstOrDefault(x => x.Url == domainUrl);
-
-            //        if (domain != null)
-            //        {
-            //            AppConstant appConstant = new AppConstant() { BaseUrl = baseUrl, ServerPath = serverPath, DomainName = domain.Name, DomainUrl = domain.Url, DomainId = domain.WebSiteDomainId };
-
-            //            HttpContext.Current.Session["AppConstant"] = appConstant;
-            //        }
-            //    }
-            //}
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Application_BeginRequest", ex);
+            }
         }
         protected void Application_EndRequest(Object sender, EventArgs e)
         {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Application_BeginRequest", ex);
+            }
         }
         protected void Application_Error(Object sender, EventArgs e)
         {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Application_Error", ex);
+            }
         }
         protected void Application_End()
         {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Application_End", ex);
+            }
         }
 
         #region Method
@@ -71,7 +73,7 @@ namespace lab.webapps
             try
             {
                 // Initializes and seeds the database.
-                Database.SetInitializer(new DBInitializer());
+                Database.SetInitializer(new DbInitializer());
 
                 using (var context = new AppDbContext())
                 {
@@ -83,9 +85,15 @@ namespace lab.webapps
             }
             catch (Exception ex)
             {
-                throw;
+                throw new Exception("Datebase Initialize Error");
             }
 
+        }
+
+        private void RedirectToError()
+        {
+            UrlHelper url = new UrlHelper(HttpContext.Current.Request.RequestContext);
+            Response.Redirect(url.Action("Error", "Home", new { Area = "" }));
         }
 
         #endregion

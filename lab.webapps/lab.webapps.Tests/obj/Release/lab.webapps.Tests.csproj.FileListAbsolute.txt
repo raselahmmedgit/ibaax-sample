@@ -30,3 +30,5 @@ D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps.Tests\bin\Release\Microsoft.Owin.xm
 D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps.Tests\obj\Release\lab.webapps.Tests.csprojResolveAssemblyReference.cache
 D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps.Tests\obj\Release\lab.webapps.Tests.dll
 D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps.Tests\obj\Release\lab.webapps.Tests.pdb
+D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps.Tests\bin\Release\log4net.dll
+D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps.Tests\bin\Release\log4net.xml

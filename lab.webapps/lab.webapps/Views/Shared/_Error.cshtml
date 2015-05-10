@@ -1,0 +1,14 @@
+﻿@model lab.webapps.ViewModels.ErrorViewModel
+
+@{
+    ViewBag.Title = "Error";
+}
+
+<div id="errorPage">
+    <div class="jumbotron">
+        <h1 class="text-danger">@Response.StatusCode</h1>
+        <h2 class="text-danger">Oops! An error occurred while processing your request.</h2>
+        <p class="lead text-danger">@Model.ErrorMessage</p>
+    </div>
+</div>
+
