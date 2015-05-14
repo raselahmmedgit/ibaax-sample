@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="AppDbContext-Web.config Connection String" description="AppDbContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=8.38.76.77;Initial Catalog=webappdb;user id=sa;password=admin123#@;MultipleActiveResultSets=true;" tags="SqlConnectionString">
+  <parameter name="AppDbContext-Web.config Connection String" description="AppDbContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=8.38.76.77\SQLEXPRESS;Initial Catalog=testcms;user id=sa;password=admin123#@;" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="D:\\RaselAhmmed\\MyLab\\lab\.webapps\\lab\.webapps\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AppDbContext']/@connectionString" />
   </parameter>
 </parameters>

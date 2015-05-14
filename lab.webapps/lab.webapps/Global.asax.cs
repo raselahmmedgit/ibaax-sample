@@ -22,7 +22,7 @@ namespace lab.webapps
 
             InitializeAndSeedDb();
         }
-        protected void Application_BeginRequest(Object sender, EventArgs e)
+        protected void Application_BeginRequest(object sender, EventArgs e)
         {
             try
             {
@@ -33,7 +33,7 @@ namespace lab.webapps
                 _logger.Error("Application_BeginRequest", ex);
             }
         }
-        protected void Application_EndRequest(Object sender, EventArgs e)
+        protected void Application_EndRequest(object sender, EventArgs e)
         {
             try
             {
@@ -44,7 +44,7 @@ namespace lab.webapps
                 _logger.Error("Application_BeginRequest", ex);
             }
         }
-        protected void Application_Error(Object sender, EventArgs e)
+        protected void Application_Error(object sender, EventArgs e)
         {
             try
             {

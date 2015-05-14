@@ -21,6 +21,18 @@ namespace lab.webapps
                   defaults: new { controller = "Page", action = "Index" }
              );
 
+            routes.MapRoute(
+                  name: "sitePropertyData",
+                  url: "GetProperty/{id}",
+                  defaults: new { controller = "Page", action = "GetProperty", id = UrlParameter.Optional }
+             );
+
+            routes.MapRoute(
+                  name: "siteAgentData",
+                  url: "GetAgent/{id}",
+                  defaults: new { controller = "Page", action = "GetAgent", id = UrlParameter.Optional }
+             );
+
             #endregion
 
             routes.MapRoute(
@@ -29,7 +41,11 @@ namespace lab.webapps
                 defaults: new { controller = "Page", action = "Index", id = UrlParameter.Optional }
             );
 
-
+            //routes.MapRoute(
+            //    name: "Account",
+            //    url: "{controller}/{action}/{id}",
+            //    defaults: new { controller = "Account", action = "Login", id = UrlParameter.Optional }
+            //);
         }
     }
 }

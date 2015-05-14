@@ -22,13 +22,15 @@
     <script src="@Url.Content("~/Scripts/jquery-ui-1.11.4.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+    @*<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>*@
     <script src="@Url.Content("~/Scripts/bootstrap.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/respond.js")" type="text/javascript"></script>
     <!--Kendo UI-->
-    <link rel="stylesheet" href="@Url.Content("~/Content/kendo/2015.1.429/kendo.common-bootstrap.min.css")" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/kendo/2015.1.429/kendo.bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/kendo/2015.1.429/kendo.common-bootstrap.min.css")" type="text/css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/kendo/2015.1.429/kendo.bootstrap.min.css")" type="text/css" />
     <script src="@Url.Content("~/Scripts/kendo/2015.1.429/kendo.all.min.js")" type="text/javascript"></script>
+    <link rel="stylesheet" href="@Url.Content("~/Content/toastr.min.css")" type="text/css" />
+    <script src="@Url.Content("~/Scripts/toastr.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/app-jq.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/modernizr-2.6.2.js")" type="text/javascript"></script>
 </head>
@@ -48,6 +50,7 @@
                 <ul class="nav navbar-nav">
                     @Html.RenderApplicationMenu()
                 </ul>
+                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
@@ -58,7 +61,7 @@
             <p>&copy; @DateTime.Now.Year - @Html.RenderApplicationFooter()</p>
         </footer>
     </div>
-    <div id="windowZone">
+    <div id="windowZone" style="display: none">
         <div id="appCommonWindow">
         </div>
         <div id="appDeleteWindow">

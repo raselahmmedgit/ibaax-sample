@@ -50,7 +50,6 @@ D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps\bin\Microsoft.Owin.Security.OAuth.x
 D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps\bin\Microsoft.Owin.Security.Google.xml
 D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps\bin\Microsoft.Owin.Security.Twitter.xml
 D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps\obj\Release\lab.webapps.csprojResolveAssemblyReference.cache
 D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps\obj\Release\lab.webapps.dll
 D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps\obj\Release\lab.webapps.pdb
 D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps\bin\Kendo.Mvc.dll
@@ -74,3 +73,4 @@ D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps\bin\sv-SE\Kendo.Mvc.resources.dll
 D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps\bin\tr-TR\Kendo.Mvc.resources.dll
 D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps\bin\uk-UA\Kendo.Mvc.resources.dll
 D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps\bin\zh-CN\Kendo.Mvc.resources.dll
+D:\RaselAhmmed\MyLab\lab.webapps\lab.webapps\obj\Release\lab.webapps.csprojResolveAssemblyReference.cache

@@ -55,8 +55,14 @@ namespace lab.webapps
                 {
                     var appInfo = db.WebSiteInfo.FirstOrDefault(x => x.WebSiteDomainId == appConstant.DomainId);
 
+                    string pageName = string.Empty;
+
+                    var pageList = db.WebSitePage.ToList().Where(x => x.WebSiteDomainId == appConstant.DomainId).ToList();
+                    var defaultPage = pageList.FirstOrDefault(x => x.IsDefault);
+                    if (defaultPage != null) pageName = defaultPage.Name;
+
                     if (appInfo != null)
-                        stringBuilder.Append(@"<a href='/" + appInfo.Name + "' class='navbar-brand'>" + appInfo.Name + "</a></li>");
+                        stringBuilder.Append(@"<a href='/" + pageName + "' class='navbar-brand'>" + appInfo.Name + "</a></li>");
 
                     strContent = stringBuilder.ToString();
                 }

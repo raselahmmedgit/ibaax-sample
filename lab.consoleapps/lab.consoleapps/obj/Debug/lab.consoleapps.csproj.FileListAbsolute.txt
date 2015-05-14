@@ -1,0 +1,10 @@
+D:\RaselAhmmed\MyLab\lab.consoleapps\lab.consoleapps\bin\Debug\lab.consoleapps.exe.config
+D:\RaselAhmmed\MyLab\lab.consoleapps\lab.consoleapps\bin\Debug\lab.consoleapps.exe
+D:\RaselAhmmed\MyLab\lab.consoleapps\lab.consoleapps\bin\Debug\lab.consoleapps.pdb
+D:\RaselAhmmed\MyLab\lab.consoleapps\lab.consoleapps\bin\Debug\EntityFramework.dll
+D:\RaselAhmmed\MyLab\lab.consoleapps\lab.consoleapps\bin\Debug\EntityFramework.SqlServer.dll
+D:\RaselAhmmed\MyLab\lab.consoleapps\lab.consoleapps\bin\Debug\EntityFramework.xml
+D:\RaselAhmmed\MyLab\lab.consoleapps\lab.consoleapps\bin\Debug\EntityFramework.SqlServer.xml
+D:\RaselAhmmed\MyLab\lab.consoleapps\lab.consoleapps\obj\Debug\lab.consoleapps.csprojResolveAssemblyReference.cache
+D:\RaselAhmmed\MyLab\lab.consoleapps\lab.consoleapps\obj\Debug\lab.consoleapps.exe
+D:\RaselAhmmed\MyLab\lab.consoleapps\lab.consoleapps\obj\Debug\lab.consoleapps.pdb

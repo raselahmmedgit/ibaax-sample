@@ -62,6 +62,8 @@ namespace lab.webapps.Models
         [MaxLength(200)]
         public string UrlParam { get; set; }
 
+        public bool IsDefault { get; set; }
+
         public int WebSiteDomainId { get; set; }
     }
 

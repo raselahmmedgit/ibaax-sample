@@ -20,10 +20,12 @@ namespace lab.webapps.Controllers
             {
                 if (Request.Url != null)
                 {
-                    string domainUrl = @"http://www.rasel.com";
-                    //string domainUrl = @"http://www.hasib.com";
-                    _baseUrl = @"http://www.rasel.com";
-                    //_baseUrl = @"http://www.hasib.com";
+                    string domainUrl = @"http://www.rebaax.com";
+                    _baseUrl = @"http://www.rebaax.com";
+
+                    //string domainUrl = @"http://www.rebaxcode.com";
+                    //_baseUrl = @"http://www.rebaxcode.com";
+
                     //string domainUrl = Request.Url.Scheme + System.Uri.SchemeDelimiter + Request.Url.Host + (Request.Url.IsDefaultPort ? "" : ":" + Request.Url.Port);
                     //_baseUrl = Request.Url.Scheme + "://" + Request.Url.Authority;
 
@@ -122,6 +124,20 @@ namespace lab.webapps.Controllers
                 throw new Exception("BeginExecuteCore Error", ex);
             }
             
+        }
+
+        protected override void HandleUnknownAction(string actionName)
+        {
+            base.HandleUnknownAction(actionName);
+        }
+
+        protected override void OnException(ExceptionContext filterContext)
+        {
+            // Let other exceptions just go unhandled
+            if (filterContext.Exception is InvalidOperationException)
+            {
+                // Default view is "error"
+            }
         }
     }
 }

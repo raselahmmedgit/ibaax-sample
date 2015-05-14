@@ -14,25 +14,24 @@ namespace lab.webapps.Controllers
         [HttpGet]
         public ActionResult Index(string pageName)
         {
-            
             if (Session["AppConstant"] != null)
             {
                 
                 if (Request.Url != null)
                 {
-                    string domainUrl = @"http://www.rasel.com";
-                    //string domainUrl = @"http://www.hasib.com";
+                    string domainUrl = @"http://www.rebaax.com";
+                    //string domainUrl = @"http://www.rebaxcode.com";
                     //string domainUrl = Request.Url.Scheme + "://" + Request.Url.Authority;
 
                     if (String.IsNullOrEmpty(pageName))
                     {
-                        pageName = "Home";
-                        
                         var domain = _db.WebSiteDomain.FirstOrDefault(x => x.Url == domainUrl);
 
                         if (domain != null)
                         {
                             var pageList = _db.WebSitePage.ToList().Where(x => x.WebSiteDomainId == domain.WebSiteDomainId).ToList();
+                            var defaultPage = pageList.FirstOrDefault(x => x.IsDefault);
+                            if (defaultPage != null) pageName = defaultPage.Name;
 
                             string strPageList = String.Empty;
 
@@ -101,6 +100,176 @@ namespace lab.webapps.Controllers
             }
 
             return View();
+        }
+
+        //public ActionResult Data(string pageName, int id)
+        public ActionResult Data(int id)
+        {
+            string pageName = string.Empty;
+            var loggedUser = (User)Session["User"];
+
+            if (Session["AppConstant"] != null)
+            {
+
+                if (Request.Url != null)
+                {
+                    string domainUrl = @"http://www.rebaax.com";
+                    //string domainUrl = @"http://www.rebaxcode.com";
+                    //string domainUrl = Request.Url.Scheme + "://" + Request.Url.Authority;
+
+                    if (String.IsNullOrEmpty(pageName))
+                    {
+                        var domain = _db.WebSiteDomain.FirstOrDefault(x => x.Url == domainUrl);
+
+                        if (domain != null)
+                        {
+                            ViewBag.DomainName = "This is " + domain.Name;
+                            ViewBag.DomainUrl = "My domain is " + domain.Url;
+                            ViewBag.PropertyName = "My Propert " + id;
+                            ViewBag.PropertyRate = "My Property Rate " + (id + 1000);
+                        }
+                        else
+                        {
+                            return RedirectToAction("NotFound");
+                        }
+                    }
+                    else
+                    {
+
+                        var domain = _db.WebSiteDomain.FirstOrDefault(x => x.Url == domainUrl);
+
+                        if (domain != null)
+                        {
+                            ViewBag.DomainName = "This is " + domain.Name;
+                            ViewBag.DomainUrl = "My domain is " + domain.Url;
+                            ViewBag.PropertyName = "My Propert " + id;
+                            ViewBag.PropertyRate = "My Property Rate " + (id + 1000);
+                        }
+                        else
+                        {
+                            return RedirectToAction("NotFound");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                return RedirectToAction("NotFound");
+            }
+
+            return View();
+        }
+
+        public ActionResult GetProperty(int id)
+        {
+            string pageName = string.Empty;
+            var loggedUser = (User)Session["User"];
+
+            if (Session["AppConstant"] != null)
+            {
+
+                if (Request.Url != null)
+                {
+                    string domainUrl = @"http://www.rebaax.com";
+                    //string domainUrl = @"http://www.rebaxcode.com";
+                    //string domainUrl = Request.Url.Scheme + "://" + Request.Url.Authority;
+
+                    if (String.IsNullOrEmpty(pageName))
+                    {
+                        var domain = _db.WebSiteDomain.FirstOrDefault(x => x.Url == domainUrl);
+
+                        if (domain != null)
+                        {
+                            ViewBag.DomainName = "This is " + domain.Name;
+                            ViewBag.DomainUrl = "My domain is " + domain.Url;
+                            ViewBag.PropertyName = "My Property " + id;
+                            ViewBag.PropertyRate = "My Property Rate " + (id + 1000);
+                        }
+                        else
+                        {
+                            return RedirectToAction("NotFound");
+                        }
+                    }
+                    else
+                    {
+
+                        var domain = _db.WebSiteDomain.FirstOrDefault(x => x.Url == domainUrl);
+
+                        if (domain != null)
+                        {
+                            ViewBag.DomainName = "This is " + domain.Name;
+                            ViewBag.DomainUrl = "My domain is " + domain.Url;
+                            ViewBag.PropertyName = "My Property " + id;
+                            ViewBag.PropertyRate = "My Property Rate " + (id + 1000);
+                        }
+                        else
+                        {
+                            return RedirectToAction("NotFound");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                return RedirectToAction("NotFound");
+            }
+
+            return View("Property");
+        }
+
+        public ActionResult GetAgent(int id)
+        {
+            string pageName = string.Empty;
+            var loggedUser = (User)Session["User"];
+
+            if (Session["AppConstant"] != null)
+            {
+
+                if (Request.Url != null)
+                {
+                    string domainUrl = @"http://www.rebaax.com";
+                    //string domainUrl = @"http://www.rebaxcode.com";
+                    //string domainUrl = Request.Url.Scheme + "://" + Request.Url.Authority;
+
+                    if (String.IsNullOrEmpty(pageName))
+                    {
+                        var domain = _db.WebSiteDomain.FirstOrDefault(x => x.Url == domainUrl);
+
+                        if (domain != null)
+                        {
+                            ViewBag.DomainName = "This is " + domain.Name;
+                            ViewBag.DomainUrl = "My domain is " + domain.Url;
+                            ViewBag.AgentName = "My Agent id " + id;
+                        }
+                        else
+                        {
+                            return RedirectToAction("NotFound");
+                        }
+                    }
+                    else
+                    {
+
+                        var domain = _db.WebSiteDomain.FirstOrDefault(x => x.Url == domainUrl);
+
+                        if (domain != null)
+                        {
+                            ViewBag.DomainName = "This is " + domain.Name;
+                            ViewBag.DomainUrl = "My domain is " + domain.Url;
+                            ViewBag.AgentName = "My Agent id " + id;
+                        }
+                        else
+                        {
+                            return RedirectToAction("NotFound");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                return RedirectToAction("NotFound");
+            }
+
+            return View("Agent");
         }
 
         public ActionResult NotFound()
