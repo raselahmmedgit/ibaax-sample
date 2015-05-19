@@ -17,7 +17,8 @@ namespace lab.mywebapps.Controllers
         // GET: Category
         public ActionResult Index()
         {
-            return View(_db.Category.ToList());
+            var categoryList = _db.Category.ToList();
+            return View(categoryList);
         }
 
         // GET: Category/Details/5
@@ -39,6 +40,8 @@ namespace lab.mywebapps.Controllers
         public ActionResult Create()
         {
             Category category = new Category();
+            category.CreateDate = DateTime.UtcNow;
+            category.CreateDate = DateTime.Now;
             return View(category);
         }
 

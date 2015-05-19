@@ -3,8 +3,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace lab.errorlogapps.Models
 {
-    public class LoginModel
+    public class LoginViewModel
     {
+        [Required]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+
         [Required]
         [Display(Name = "User name")]
         public string UserName { get; set; }

@@ -1,0 +1,199 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-3">
+            <h2>GMail Contact</h2>
+            <p><a href="/Home/GMail" class="btn btn-primary btn-lg">Click</a></p>
+        </div>
+        <div class="col-md-3">
+            <h2>Hotmail Contact</h2>
+            <p><a href="/Home/Hotmail" class="btn btn-primary btn-lg">Click</a></p>
+        </div>
+        <div class="col-md-3">
+            <h2>Yahoo Contact</h2>
+            <p><a href="/Home/Yahoo" class="btn btn-primary btn-lg">Click</a></p>
+        </div>
+        <div class="col-md-3">
+            <h2>LinkedIn Contact</h2>
+            <p><a href="/Home/LinkedIn" class="btn btn-primary btn-lg">Click</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <h2>Facebook Contact</h2>
+            <p><a href="/Home/Facebook" class="btn btn-primary btn-lg">Click</a></p>
+        </div>
+        <div class="col-md-3">
+            <h2>.. Contact</h2>
+            <p><a href="#" class="btn btn-primary btn-lg">Click</a></p>
+        </div>
+        <div class="col-md-3">
+            <h2>.. Contact</h2>
+            <p><a href="#" class="btn btn-primary btn-lg">Click</a></p>
+        </div>
+        <div class="col-md-3">
+            <h2>.. Contact</h2>
+            <p><a href="#" class="btn btn-primary btn-lg">Click</a></p>
+        </div>
+    </div>
+</div>
+
+
+<div class="connection-importer-container">
+    <script class="li-control" type="linkedin/control" id="control-dust-client-1">
+    LI.Controls.addControl("control-dust-client-1", "LI.AbookExpandedTracking", {origin: 'desktop-global-nav-add-connections-dropdown',impressionId: '091a12ca9a0b431dabe9a0e0aabe1528',trackingUrl: '/fetch/impressionSubmit?csrfToken=ajax%3A3076884434304827943'})
+    </script>
+    <form action="/fetch/auth-redirect" method="POST" name="nWMIForm" class="hidden" id="oneClickForm" target="fetch_popup">
+        <input type="text" autocomplete="off" name="email" value="qalinkedindummy@hotmail.com"><input type="hidden" id="referrer_alias_id" name="referrer_alias" value=""><input type="hidden" id="in_promo_id" name="in_promo" value=""><input type="hidden" id="secured_id" name="secured" value="true"><input type="hidden" id="variation_id" name="variation" value="BUTTONVIEW"><input type="hidden" id="origin_name_id" name="origin_name" value="hotmail"><input type="hidden" id="abookImportImpressionId_id" name="abookImportImpressionId" value="091a12ca9a0b431dabe9a0e0aabe1528"><input type="hidden" id="csrfToken_id" name="csrfToken" value="ajax:3076884434304827943"><input type="hidden" id="sourceAlias_id" name="sourceAlias" value="0_7rwa1M83_82svSiZSSUBPyOiQBpVhj24o8OngPnVv4C">
+    </form>
+    <ul class="emailProviders" id="control_gen_13">
+        <li data-li-dummy-email="qalinkedindummy@gmail.com" class="gmail one-click"><a title="gmail" href="#">Gmail</a></li>
+        <li data-li-dummy-email="qalinkedindummy@yahoo.com" class="yahooSocial one-click"><a title="yahooSocial" href="#">Yahoo</a></li>
+        <li data-li-dummy-email="qalinkedindummy@hotmail.com" class="hotmail one-click"><a title="hotmail" href="#">Hotmail</a></li>
+        <li class="other" id="other-email-li"><a role="button" class="expand-form-link selected" id="other-email" href="#">Other<span class="other-a11y-visible a11y-to-activate">Clicking this button will move focus into an input to enter your email address.</span><span class="other-a11y-visible a11y-to-deactivate">Clicking this button will cancel email address entry.</span></a></li>
+    </ul>
+
+    <script class="li-control" type="text/javascript+initialized" id="controlinit-dust-client-2">LI.Controls.addControl("control-dust-client-2", "LI.OneClickImporter", {targetFormId : 'oneClickForm',emailFieldName : 'email',oneClickSelector : '.one-click',fireDisplayTracking : true,submitterConfig : {formTarget : 'fetch_popup',emailFieldName : 'email',successUrl : '\/fetch\/email-resolve'}})
+    </script>
+    <div class="import-form abook-imprt-container hidden" id="otherEmailForm">
+        
+        <script class="li-control" type="linkedin/control" id="control-dust-client-3">
+    LI.Controls.addControl("control-dust-client-3", "LI.AbookExpandedTracking", {origin: 'desktop-global-nav-add-connections-dropdown',impressionId: '8689c5e1020c4179b298c1df7003a140',trackingUrl: '/fetch/impressionSubmit?csrfToken=ajax%3A3076884434304827943'})
+    </script>
+        <form method="POST" name="nWMIForm" action="/fetch/auth-redirect" target="wmi_form_popup" class="stacked-form import-form" id="abook-import-form">
+            <fieldset class="authenticate">
+                <legend>Enter your email credentials</legend>
+                <div id="wmi-notice" role="alert" class="input-wrapper error">
+                    <strong class="error-txt addconndropdown-error"></strong>
+                </div>
+                <div class="input-wrapper">
+                    <div class="form-row">
+                        <label class="ghost" for="email-nWMIForm" id="control_gen_14" style="display: none;">Email</label>
+                        <script class="li-control" type="text/javascript+initialized" id="controlinit-dust-client-4">LI.Controls.addControl("control-dust-client-4", "GhostLabel", {})
+                        </script>
+                        <input type="text" name="email" value="" id="email-nWMIForm" placeholder="Email">
+                        <span class="loader"></span>
+                    </div><label class="ghost" for="password-nWMIForm" id="control_gen_15" style="display: none;">Password</label>
+                    <script class="li-control" type="text/javascript+initialized" id="controlinit-dust-client-5">LI.Controls.addControl("control-dust-client-5", "GhostLabel", {})</script><input type="password" name="password" value="" id="password-nWMIForm" placeholder="Password" disabled="disabled"><input type="hidden" id="referrer_alias_id" name="referrer_alias" value=""><input type="hidden" id="secured_id" name="secured" value="true"><input type="hidden" id="in_promo_id" name="in_promo" value=""><input type="hidden" id="variation_id" name="variation" value="simpleForm"><input type="hidden" id="origin_name_id" name="origin_name" value=""><input type="hidden" id="csrfToken_id" name="csrfToken" value="ajax:3076884434304827943"><input type="hidden" id="sourceAlias_id" name="sourceAlias" value="0_7rwa1M83_82svSiZSSUBPyOiQBpVhj24o8OngPnVv4C"><input type="hidden" id="abookImportImpressionId_id" name="abookImportImpressionId" value="8689c5e1020c4179b298c1df7003a140">
+                </div>
+            </fieldset><input type="submit" value="Continue" id="resolve-btn" class="otherFormSubmitBtn" disabled="disabled"><input type="button" value="Cancel" id="cancelOtherEmailFormBtn" class="otherFormCancelBtn">
+        </form>
+        <script class="li-control" type="text/javascript+initialized" id="controlinit-dust-client-6">LI.Controls.addControl("control-dust-client-6", "LI.FetchForm", {viewConstructor : LI.FetchFormView,viewConfig : {unsupportedEmailTypeMessage : 'We don’t currently support that webmail service. Please try a different service, or import your desktop contacts.',invalidEmailMessage : 'Please enter a valid email address.',generalErrorMessage : 'We are unable to import your email contacts. Please try again later.',invalidLoginMessage : 'Invalid username and\/or password. Please enter your email password, not your LinkedIn account password.',loginLimitMessage : 'You have reached the daily login limit for your email provider. Please try again tomorrow.',noContactsReturnedMessage : 'We were unable to find any contacts in your address book',webmailUrlErrorMessage: 'webmail url error - need i18n, voice and tone!',userEnteredWebmailUrlErrorMessage: 'other webmail url error - need i18n, voice and tone!',emailInputClass: 'input[name=email]',pwordInputClass: 'input[name=password]',errorElId: '#wmi-notice',errorTextClass: '.error-txt',submitBtnClass: '.add-connections',submitBtnClass: '.otherFormSubmitBtn',loadSpinnerClass: '.loader'},resolverConstructor : LI.ImportEmailResolver,resolverConfig : {resolveUrl: '\/fetch\/email-resolve',emailPlaceholder: 'email'},submitterConstructor : LI.ImportSubmitter,submitterConfig : {formTarget : 'wmi_form_popup',successUrl : '\/fetch\/followup?goback=',suppressSuccess : false,exchangeImapEnabled : false},isInitResolved : true,hidePasswordField : true})
+        </script>
+    </div>
+</div>
+
+<div class="col-xs-12">
+    <div class="col-xs-8">&nbsp;</div>
+    <div class="col-xs-1">
+        <a title="Share this video on Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=http://live.jobslice.com/CareerPortal/JobOverview/14852?jobid=46" onclick="window.open('https://www.facebook.com/sharer.php?u=http://live.jobslice.com/CareerPortal/JobOverview/14852?jobId=46', '', 'toolbar=no,location=no,directories=no,status=no, menubar=no,scrollbars=no,resizable=no,width=655,height=300'); return false;">
+            <img class=" " src="/Assets/images/interface/social_icon03.png">
+        </a>
+    </div>
+    <div class="col-xs-1">
+
+        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://live.jobslice.com/CareerPortal/JobOverview/14852?jobId=46&amp;title=&amp;summary=&amp;source=" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://live.jobslice.com/CareerPortal/JobOverview/14852?jobId=46&amp;title=&amp;summary=&amp;source=', '', 'toolbar=no,location=no,directories=no,status=no, menubar=no,scrollbars=no,resizable=no,width=655,height=300'); return false;">
+            <img class=" " src="/Assets/images/interface/social_icon06.png">
+        </a>
+
+    </div>
+    <div class="col-xs-1">
+        <a title="Share this video on Twitter" target="_blank" href="http://twitter.com/share?url=http://live.jobslice.com/CareerPortal/JobOverview/14852?jobId=46" onclick="window.open('http://twitter.com/share?url=http://live.jobslice.com/CareerPortal/JobOverview/14852?jobId=46', '', 'toolbar=no,location=no,directories=no,status=no, menubar=no,scrollbars=no,resizable=no,width=600,height=255'); return false;">
+            <img class=" " src="/Assets/images/interface/social_icon01.png">
+        </a>
+    </div>
+    <div class="col-xs-1">
+        <a title="Share this video on Google Plus" target="_blank" href="https://plus.google.com/share?url=http://live.jobslice.com/CareerPortal/JobOverview/14852?jobId=46" onclick="window.open('https://plus.google.com/share?url=http://live.jobslice.com/CareerPortal/JobOverview/14852?jobId=46', '', 'toolbar=no,location=no,directories=no,status=no, menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+            <img class=" " src="/Assets/images/interface/social_icon04.png">
+        </a>
+    </div>
+</div>
+
+https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Dhttps://www.google.com/m8/feeds%2Bhttps://www.googleapis.com/auth/userinfo.email%2Bhttps://www.googleapis.com/auth/userinfo.profile%26response_type%3Dcode%26access_type%3Doffline%26redirect_uri%3Dhttps://www.linkedin.com/genie/handle%26approval_prompt%3Dforce%26state%3Doauth20_4xADV1Zl5wFnzPQiiZ4tk34NuQAWeYCdnuoj8Ol4gUCyOX5l0GBjXIjAV3tF-BJTwik0mn5SAubIgmKMcrmCopKmpMe1kcYRn7LQPF0wPxo%26client_id%3D802926523257.apps.googleusercontent.com%26hl%3Den%26from_login%3D1%26as%3D1911433652efc55e&ltmpl=popup&shdf=CswCCxIRdGhpcmRQYXJ0eUxvZ29Vcmwa2wEvL2ltYWdlcy1sc28tb3BlbnNvY2lhbC5nb29nbGV1c2VyY29udGVudC5jb20vZ2FkZ2V0cy9wcm94eT91cmw9aHR0cDovL3MuYy5sbmtkLmxpY2RuLmNvbS9zY2RzL2NvbW1vbi91L2ltZy9hcHBsaWNhdGlvbnMvaW5faWNvbl82MHg2MC5wbmcmY29udGFpbmVyPWxzbyZnYWRnZXQ9YSZyZXdyaXRlTWltZT1pbWFnZS8qJnJlc2l6ZV9oPTEyMCZyZXNpemVfdz0xMjAmbm9fZXhwYW5kPTEMCxIVdGhpcmRQYXJ0eURpc3BsYXlOYW1lGghMaW5rZWRJbgwLEgZkb21haW4aCExpbmtlZEluDAsSFXRoaXJkUGFydHlEaXNwbGF5VHlwZRoHREVGQVVMVAwSA2xzbyIUBdu0m-YtPm9H8KApd5dwwQNit5woATIUdE4AGnJkqLR6XgrOYXTCo-JlKLM&hl=en&sarp=1&scc=1
+
+https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Dhttps://www.google.com/m8/feeds%2Bhttps://www.googleapis.com/auth/userinfo.email%2Bhttps://www.googleapis.com/auth/userinfo.profile%26response_type%3Dcode%26access_type%3Doffline%26redirect_uri%3Dhttp://www.ibaax.com
+
+{"web":{"auth_uri":"https://accounts.google.com/o/oauth2/auth","client_secret":"W-uotptNhlJttMIH4TirhBvI","token_uri":"https://accounts.google.com/o/oauth2/token","client_email":"1003358596053-flemm3mfim7b512u3g60hkbako4vpmh5@developer.gserviceaccount.com","redirect_uris":["http://www.ibaax.com/oauth2callback"],"client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/1003358596053-flemm3mfim7b512u3g60hkbako4vpmh5@developer.gserviceaccount.com","client_id":"1003358596053-flemm3mfim7b512u3g60hkbako4vpmh5.apps.googleusercontent.com","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","javascript_origins":["http://www.ibaax.com"]}}
+
+<div class="flex-module import-prompt">
+    <div data-height="550" data-width="880" data-popup="true" data-url="/invitations/oauth_launch?service=gmail" data-service="gmail" class="cta u-cf js-launch-service">
+        <span class="service u-sizeFit">
+            <span class="icon service-gmail"></span>
+        </span>
+        <p class="u-sizeFit">
+            <strong>Find people you know</strong>
+            <span>Import your contacts from Gmail</span>
+        </p>
+    </div>
+    <p class="flex-module-inner">
+        <button class="btn-link js-connect-other" type="button">Connect other address books</button>
+    </p>
+    <div class="other-services">
+        <span data-height="512" data-width="512" data-popup="true" data-url="/invitations/oauth_launch?service=aol" data-service="aol" class="service js-launch-service">
+            <span class="icon service-aol"></span>
+            <div>AOL</div>
+        </span>
+        <span data-height="512" data-width="512" data-popup="true" data-url="/invitations/oauth_launch?service=msn2" data-service="msn2" class="service js-launch-service">
+            <span class="icon service-msn2"></span>
+            <div>Outlook</div>
+        </span>
+        <span data-height="512" data-width="512" data-popup="true" data-url="/invitations/oauth_launch?service=yahoo" data-service="yahoo" class="service js-launch-service">
+            <span class="icon service-yahoo"></span>
+            <div>Yahoo</div>
+        </span>
+        <p>
+            <span>
+                Choosing an option above will open a window for you to log in and securely import your contacts to Twitter. We'll also use this information to make follow suggestions. You can remove this privilege at any time.
+            </span>
+        </p>
+    </div>
+</div>
+
+
+<ul id="import-services-list" class="find-friends-list">
+    <li class="js-launch-service service-row-matched" data-service="gmail" data-url="/invitations/oauth_launch?service=gmail" data-popup="true" data-width="880" data-height="550">
+        <button class="btn  primary-btn " type="button">
+            Search contacts
+        </button>
+        <div class="js-service-name source" data-service-id="gmail">
+
+            <span class="icon service-gmail"></span><b>Gmail</b>
+        </div>
+
+        <div class="metadata matched-email">raselahmmed@gmail.com</div>
+    </li>
+    <li class="js-launch-service " data-service="aol" data-url="/invitations/oauth_launch?service=aol" data-popup="true" data-width="512" data-height="512">
+        <button class="btn " type="button">
+            Search contacts
+        </button>
+        <div class="js-service-name source" data-service-id="aol">
+
+            <span class="icon service-aol"></span><b>AOL</b>
+        </div>
+
+    </li>
+    <li class="js-launch-service " data-service="msn2" data-url="/invitations/oauth_launch?service=msn2" data-popup="true" data-width="512" data-height="512">
+        <button class="btn " type="button">
+            Search contacts
+        </button>
+        <div class="js-service-name source" data-service-id="msn2">
+
+            <span class="icon service-msn2"></span><b>Outlook</b>
+        </div>
+
+    </li>
+    <li class="js-launch-service " data-service="yahoo" data-url="/invitations/oauth_launch?service=yahoo" data-popup="true" data-width="512" data-height="512">
+        <button class="btn " type="button">
+            Search contacts
+        </button>
+        <div class="js-service-name source" data-service-id="yahoo">
+
+            <span class="icon service-yahoo"></span><b>Yahoo</b>
+        </div>
+
+    </li>
+</ul>
+
