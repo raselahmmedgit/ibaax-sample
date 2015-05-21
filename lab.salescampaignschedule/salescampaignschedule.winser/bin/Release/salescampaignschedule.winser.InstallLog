@@ -1,0 +1,84 @@
+﻿Installing assembly 'D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.InstallLog
+   assemblypath = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe
+Installing service Sales Campaign Schedule Service...
+Service Sales Campaign Schedule Service has been successfully installed.
+Creating EventLog source Sales Campaign Schedule Service in log Application...
+Committing assembly 'D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.InstallLog
+   assemblypath = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe
+Uninstalling assembly 'D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.InstallLog
+   assemblypath = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe
+Removing EventLog source Sales Campaign Schedule Service.
+Service Sales Campaign Schedule Service is being removed from the system...
+Service Sales Campaign Schedule Service was successfully removed from the system.
+Installing assembly 'D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.InstallLog
+   assemblypath = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe
+Installing service Sales Campaign Schedule Service...
+Service Sales Campaign Schedule Service has been successfully installed.
+Creating EventLog source Sales Campaign Schedule Service in log Application...
+Committing assembly 'D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.InstallLog
+   assemblypath = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe
+Uninstalling assembly 'D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.InstallLog
+   assemblypath = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe
+Removing EventLog source Sales Campaign Schedule Service.
+Service Sales Campaign Schedule Service is being removed from the system...
+Service Sales Campaign Schedule Service was successfully removed from the system.
+Installing assembly 'D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.InstallLog
+   assemblypath = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe
+Installing service Sales Campaign Schedule Service...
+Service Sales Campaign Schedule Service has been successfully installed.
+Creating EventLog source Sales Campaign Schedule Service in log Application...
+Committing assembly 'D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.InstallLog
+   assemblypath = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe
+Uninstalling assembly 'D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.InstallLog
+   assemblypath = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe
+Removing EventLog source Sales Campaign Schedule Service.
+Service Sales Campaign Schedule Service is being removed from the system...
+Service Sales Campaign Schedule Service was successfully removed from the system.
+Installing assembly 'D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.InstallLog
+   assemblypath = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe
+Installing service Sales Campaign Schedule Service...
+Service Sales Campaign Schedule Service has been successfully installed.
+Creating EventLog source Sales Campaign Schedule Service in log Application...
+Committing assembly 'D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.InstallLog
+   assemblypath = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe
+Uninstalling assembly 'D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.InstallLog
+   assemblypath = D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Release\salescampaignschedule.winser.exe
+Removing EventLog source Sales Campaign Schedule Service.
+Service Sales Campaign Schedule Service is being removed from the system...
+Service Sales Campaign Schedule Service was successfully removed from the system.

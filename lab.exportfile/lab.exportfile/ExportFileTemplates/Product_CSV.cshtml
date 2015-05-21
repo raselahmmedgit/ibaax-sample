@@ -1,0 +1,5 @@
+@inherits RazorTemplateFolderHost<IEnumerable<lab.exportfile.Models.Product>>
+"ProductId","Name","Price","CategoryId","Category","TempId","KendoWindow","ActionLink","HasCreate","HasUpdate","HasDelete"
+@foreach(var item in Model){
+@RenderPartial("~/Product_CSV_item.cshtml",item);
+}

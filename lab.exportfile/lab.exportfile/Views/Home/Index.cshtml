@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-3">
+            <h2>Export Excel By Using Exporter</h2>
+            <p><a href="/Home/GetExporterFile" class="btn btn-primary btn-lg">Excel</a></p>
+        </div>
+        <div class="col-md-3">
+            <h2>Export Excel By Using Export Helper</h2>
+            <p><a href="/Home/GetCSVFile" class="btn btn-primary btn-lg">CSV</a></p>
+        </div>
+        <div class="col-md-3">
+            <h2>Export Excel By Using Export Helper</h2>
+            <p><a href="/Home/GetExporterFile" class="btn btn-primary btn-lg">Excel</a></p>
+        </div>
+        <div class="col-md-3">
+            <h2>Export Excel By Using Ajax Post</h2>
+            <p><a href="/Home/GetExporterFile" id="lnkExportCSV" class="btn btn-primary btn-lg">CSV</a></p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    function setSingleContactId(elm, event) {
+        event.preventDefault();
+        var contactId = $(elm).data('contactvalue');
+        $('#singleContactID').val(contactId);
+    }
+
+    $(document).ready(function() {
+
+        $("#lnkExportCSV").unbind("click").bind("click", function () {
+
+            var postUrl = $(this).attr('href');
+
+            var paramValue = { contactIds: contactIds, searchContact: contactSearchViewModel };
+
+            $.post(postUrl, paramValue, function (data) {
+
+                if (data.success) {
+
+                    window.location = data.downloadurl;
+
+                } else {
+                    console.log(data.data, data.success);
+                }
+
+            });
+
+            return false;
+
+        });
+
+    });
+</script>
+

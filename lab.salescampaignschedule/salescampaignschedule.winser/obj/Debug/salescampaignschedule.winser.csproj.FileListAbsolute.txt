@@ -1,0 +1,9 @@
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Debug\salescampaignschedule.winser.exe.config
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Debug\salescampaignschedule.winser.exe
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Debug\salescampaignschedule.winser.pdb
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Debug\log4net.dll
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\bin\Debug\log4net.xml
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\obj\Debug\salescampaignschedule.winser.ProjectInstaller.resources
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\obj\Debug\salescampaignschedule.winser.csproj.GenerateResource.Cache
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\obj\Debug\salescampaignschedule.winser.exe
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.winser\obj\Debug\salescampaignschedule.winser.pdb
