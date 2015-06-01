@@ -47,9 +47,9 @@ namespace salescampaignschedule.web.Models
             // Create default SalesCampaignSchedule.
             var salesCampaignSchedules = new List<SalesCampaignSchedule>
                             {
-                                new SalesCampaignSchedule {SalesCampaignScheduleId=1, SalesCampaignScheduleName = "Sales Campaign 1 Schedule", ScheduleDate=DateTime.Now, ScheduleTimeZone="GMT+05:30) India Standard Time (Asia/Colombo)", SalesCampaignId=1},
-                                new SalesCampaignSchedule {SalesCampaignScheduleId=2, SalesCampaignScheduleName = "Sales Campaign 1 Schedule", ScheduleDate=DateTime.Now, ScheduleTimeZone="(GMT+06:00) Bangladesh Time (Asia/Dhaka)", SalesCampaignId=1},
-                                new SalesCampaignSchedule {SalesCampaignScheduleId=3, SalesCampaignScheduleName = "Sales Campaign 2 Schedule", ScheduleDate=DateTime.Now, ScheduleTimeZone="(GMT+04:00) Armenia Time (Asia/Yerevan)", SalesCampaignId=2}
+                                new SalesCampaignSchedule {SalesCampaignScheduleId=1, SalesCampaignScheduleName = "Sales Campaign 1 Schedule", ScheduleDateTime=DateTime.Now, ScheduleTimeZone="GMT+05:30) India Standard Time (Asia/Colombo)", SalesCampaignId=1},
+                                new SalesCampaignSchedule {SalesCampaignScheduleId=2, SalesCampaignScheduleName = "Sales Campaign 1 Schedule", ScheduleDateTime=DateTime.Now, ScheduleTimeZone="(GMT+06:00) Bangladesh Time (Asia/Dhaka)", SalesCampaignId=1},
+                                new SalesCampaignSchedule {SalesCampaignScheduleId=3, SalesCampaignScheduleName = "Sales Campaign 2 Schedule", ScheduleDateTime=DateTime.Now, ScheduleTimeZone="(GMT+04:00) Armenia Time (Asia/Yerevan)", SalesCampaignId=2}
                             };
 
             salesCampaignSchedules.ForEach(c => context.SalesCampaignSchedule.Add(c));

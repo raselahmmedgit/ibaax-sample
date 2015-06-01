@@ -39,6 +39,26 @@ namespace salescampaignschedule.web.Models
         public string SalesCampaignName { get; set; }
     }
 
+    public class SalesCampaignScheduleAlertType //: BaseModel
+    {
+        [Key]
+        public int SalesCampaignScheduleCategoryId { get; set; }
+        [DisplayName("Sales Campaign Category Name")]
+        [Required(ErrorMessage = "Sales Campaign Category Name is required")]
+        [MaxLength(200)]
+        public string SalesCampaignCategoryName { get; set; }
+    }
+
+    public class SalesCampaignScheduleCategory //: BaseModel
+    {
+        [Key]
+        public int SalesCampaignScheduleCategoryId { get; set; }
+        [DisplayName("Sales Campaign Category Name")]
+        [Required(ErrorMessage = "Sales Campaign Category Name is required")]
+        [MaxLength(200)]
+        public string SalesCampaignCategoryName { get; set; }
+    }
+
     public class SalesCampaignSchedule //: BaseModel
     {
         [Key]
@@ -49,7 +69,7 @@ namespace salescampaignschedule.web.Models
         public string SalesCampaignScheduleName { get; set; }
 
         [DisplayName("Schedule Date")]
-        public DateTime ScheduleDate { get; set; }
+        public DateTime ScheduleDateTime { get; set; }
 
         [DisplayName("Schedule Time Zone")]
         public string ScheduleTimeZone { get; set; }

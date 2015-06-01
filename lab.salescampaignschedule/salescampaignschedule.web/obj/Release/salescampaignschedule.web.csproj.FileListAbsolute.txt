@@ -1,7 +1,10 @@
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\obj\Release\salescampaignschedule.web.csprojResolveAssemblyReference.cache
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\salescampaignschedule.web.dll.config
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\salescampaignschedule.web.dll
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\salescampaignschedule.web.pdb
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\Antlr3.Runtime.dll
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\AWSSDK.dll
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\BouncyCastle.Crypto.dll
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\EntityFramework.dll
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\EntityFramework.SqlServer.dll
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\log4net.dll
@@ -18,6 +21,7 @@ D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\Mic
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\Microsoft.Owin.Security.OAuth.dll
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\Microsoft.Owin.Security.Twitter.dll
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\Microsoft.Web.Infrastructure.dll
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\MimeKitLite.dll
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\Newtonsoft.Json.dll
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\Owin.dll
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\System.Web.Helpers.dll
@@ -28,7 +32,10 @@ D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\Sys
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\System.Web.WebPages.dll
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\System.Web.WebPages.Razor.dll
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\WebGrease.dll
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\AWSSDK.pdb
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\BouncyCastle.Crypto.pdb
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\log4net.xml
+D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\MimeKitLite.xml
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\System.Web.Helpers.xml
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\System.Web.Mvc.xml
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\System.Web.Optimization.xml
@@ -52,6 +59,5 @@ D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\Mic
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\Microsoft.Owin.Security.Google.xml
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\Microsoft.Owin.Security.Twitter.xml
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\obj\Release\salescampaignschedule.web.csprojResolveAssemblyReference.cache
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\obj\Release\salescampaignschedule.web.dll
 D:\RaselAhmmed\MyLab\lab.salescampaignschedule\salescampaignschedule.web\obj\Release\salescampaignschedule.web.pdb
