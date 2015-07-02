@@ -1,0 +1,15 @@
+D:\RaselAhmmed\MyLab\lab.quartzscheduler\lab.quartzscheduler\bin\Debug\lab.quartzscheduler.exe.config
+D:\RaselAhmmed\MyLab\lab.quartzscheduler\lab.quartzscheduler\bin\Debug\lab.quartzscheduler.exe
+D:\RaselAhmmed\MyLab\lab.quartzscheduler\lab.quartzscheduler\bin\Debug\lab.quartzscheduler.pdb
+D:\RaselAhmmed\MyLab\lab.quartzscheduler\lab.quartzscheduler\bin\Debug\Common.Logging.Core.dll
+D:\RaselAhmmed\MyLab\lab.quartzscheduler\lab.quartzscheduler\bin\Debug\Common.Logging.dll
+D:\RaselAhmmed\MyLab\lab.quartzscheduler\lab.quartzscheduler\bin\Debug\Quartz.dll
+D:\RaselAhmmed\MyLab\lab.quartzscheduler\lab.quartzscheduler\bin\Debug\Common.Logging.pdb
+D:\RaselAhmmed\MyLab\lab.quartzscheduler\lab.quartzscheduler\bin\Debug\Common.Logging.xml
+D:\RaselAhmmed\MyLab\lab.quartzscheduler\lab.quartzscheduler\bin\Debug\Common.Logging.Core.pdb
+D:\RaselAhmmed\MyLab\lab.quartzscheduler\lab.quartzscheduler\bin\Debug\Common.Logging.Core.xml
+D:\RaselAhmmed\MyLab\lab.quartzscheduler\lab.quartzscheduler\bin\Debug\Quartz.pdb
+D:\RaselAhmmed\MyLab\lab.quartzscheduler\lab.quartzscheduler\bin\Debug\Quartz.xml
+D:\RaselAhmmed\MyLab\lab.quartzscheduler\lab.quartzscheduler\obj\Debug\lab.quartzscheduler.csprojResolveAssemblyReference.cache
+D:\RaselAhmmed\MyLab\lab.quartzscheduler\lab.quartzscheduler\obj\Debug\lab.quartzscheduler.exe
+D:\RaselAhmmed\MyLab\lab.quartzscheduler\lab.quartzscheduler\obj\Debug\lab.quartzscheduler.pdb
