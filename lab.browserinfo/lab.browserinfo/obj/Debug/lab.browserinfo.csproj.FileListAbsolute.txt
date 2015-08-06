@@ -1,0 +1,6 @@
+c:\users\user\documents\visual studio 2013\Projects\lab.browserinfo\lab.browserinfo\bin\Debug\lab.browserinfo.exe.config
+c:\users\user\documents\visual studio 2013\Projects\lab.browserinfo\lab.browserinfo\bin\Debug\lab.browserinfo.exe
+c:\users\user\documents\visual studio 2013\Projects\lab.browserinfo\lab.browserinfo\bin\Debug\lab.browserinfo.pdb
+c:\users\user\documents\visual studio 2013\Projects\lab.browserinfo\lab.browserinfo\obj\Debug\lab.browserinfo.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2013\Projects\lab.browserinfo\lab.browserinfo\obj\Debug\lab.browserinfo.exe
+c:\users\user\documents\visual studio 2013\Projects\lab.browserinfo\lab.browserinfo\obj\Debug\lab.browserinfo.pdb
