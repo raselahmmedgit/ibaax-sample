@@ -1,0 +1,56 @@
+﻿Installing assembly 'C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.InstallLog
+   assemblypath = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe assembly.
+Committing assembly 'C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.InstallLog
+   assemblypath = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe assembly.
+Remove InstallState file because there are no installers.
+Installing assembly 'C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.InstallLog
+   assemblypath = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe
+Installing service iBaax Windows Service...
+Service iBaax Windows Service has been successfully installed.
+Creating EventLog source iBaax Windows Service in log Application...
+Committing assembly 'C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.InstallLog
+   assemblypath = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe
+Uninstalling assembly 'C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.InstallLog
+   assemblypath = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe
+Removing EventLog source iBaax Windows Service.
+Service iBaax Windows Service is being removed from the system...
+Service iBaax Windows Service was successfully removed from the system.
+Installing assembly 'C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.InstallLog
+   assemblypath = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe
+Installing service iBaax Windows Service...
+Service iBaax Windows Service has been successfully installed.
+Creating EventLog source iBaax Windows Service in log Application...
+Committing assembly 'C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.InstallLog
+   assemblypath = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe
+Uninstalling assembly 'C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.InstallLog
+   assemblypath = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe
+Removing EventLog source iBaax Windows Service.
+Service iBaax Windows Service is being removed from the system...
+Service iBaax Windows Service was successfully removed from the system.
+Attempt to stop service iBaax Windows Service.

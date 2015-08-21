@@ -1,133 +1,38 @@
-INFO  2015-08-05 13:04:16,761   111ms HomeController         Index              - Starting GenerateDebugLog Method...
-DEBUG 2015-08-05 13:04:16,772   122ms HomeController         Index              - No input parameters for method.
-INFO  2015-08-05 13:04:16,772   122ms HomeController         Index              - Starting loop...
-DEBUG 2015-08-05 13:04:16,772   122ms HomeController         Index              - Current value: 0
-DEBUG 2015-08-05 13:04:16,773   123ms HomeController         Index              - Current value: 1
-DEBUG 2015-08-05 13:04:16,773   123ms HomeController         Index              - Current value: 2
-DEBUG 2015-08-05 13:04:16,773   123ms HomeController         Index              - Current value: 3
-DEBUG 2015-08-05 13:04:16,773   123ms HomeController         Index              - Current value: 4
-DEBUG 2015-08-05 13:04:16,774   124ms HomeController         Index              - Current value: 5
-DEBUG 2015-08-05 13:04:16,774   124ms HomeController         Index              - Current value: 6
-DEBUG 2015-08-05 13:04:16,774   124ms HomeController         Index              - Current value: 7
-DEBUG 2015-08-05 13:04:16,774   124ms HomeController         Index              - Current value: 8
-DEBUG 2015-08-05 13:04:16,774   124ms HomeController         Index              - Current value: 9
-DEBUG 2015-08-05 13:04:16,774   124ms HomeController         Index              - Current value: 10
-INFO  2015-08-05 13:04:16,775   125ms HomeController         Index              - End loop.
-INFO  2015-08-05 13:04:16,775   125ms HomeController         Index              - End GenerateDebugLog Method.
-ERROR 2015-08-05 13:04:16,810   160ms HomeController         Index              - Error! 
+INFO  2015-05-14 13:10:10,209   111ms HomeController         Index              - Starting GenerateDebugLog Method...
+DEBUG 2015-05-14 13:10:10,219   121ms HomeController         Index              - No input parameters for method.
+INFO  2015-05-14 13:10:10,220   122ms HomeController         Index              - Starting loop...
+DEBUG 2015-05-14 13:10:10,220   122ms HomeController         Index              - Current value: 0
+DEBUG 2015-05-14 13:10:10,220   122ms HomeController         Index              - Current value: 1
+DEBUG 2015-05-14 13:10:10,221   123ms HomeController         Index              - Current value: 2
+DEBUG 2015-05-14 13:10:10,221   123ms HomeController         Index              - Current value: 3
+DEBUG 2015-05-14 13:10:10,221   123ms HomeController         Index              - Current value: 4
+DEBUG 2015-05-14 13:10:10,221   123ms HomeController         Index              - Current value: 5
+DEBUG 2015-05-14 13:10:10,221   123ms HomeController         Index              - Current value: 6
+DEBUG 2015-05-14 13:10:10,222   124ms HomeController         Index              - Current value: 7
+DEBUG 2015-05-14 13:10:10,222   124ms HomeController         Index              - Current value: 8
+DEBUG 2015-05-14 13:10:10,222   124ms HomeController         Index              - Current value: 9
+DEBUG 2015-05-14 13:10:10,222   124ms HomeController         Index              - Current value: 10
+INFO  2015-05-14 13:10:10,222   124ms HomeController         Index              - End loop.
+INFO  2015-05-14 13:10:10,223   125ms HomeController         Index              - End GenerateDebugLog Method.
+ERROR 2015-05-14 13:10:10,248   150ms HomeController         Index              - Error! 
 System.Exception: Exception test!
-   at lab.errorlogapps.Controllers.HomeController.Index() in c:\Users\user\Documents\GitHub\ibaax-sample\lab.errorlogapps\lab.errorlogapps\Controllers\HomeController.cs:line 58
-INFO  2015-08-05 13:10:29,263   109ms HomeController         Index              - Starting GenerateDebugLog Method...
-DEBUG 2015-08-05 13:10:29,276   122ms HomeController         Index              - No input parameters for method.
-INFO  2015-08-05 13:10:29,277   123ms HomeController         Index              - Starting loop...
-DEBUG 2015-08-05 13:10:29,277   123ms HomeController         Index              - Current value: 0
-DEBUG 2015-08-05 13:10:29,277   123ms HomeController         Index              - Current value: 1
-DEBUG 2015-08-05 13:10:29,277   123ms HomeController         Index              - Current value: 2
-DEBUG 2015-08-05 13:10:29,278   124ms HomeController         Index              - Current value: 3
-DEBUG 2015-08-05 13:10:29,278   124ms HomeController         Index              - Current value: 4
-DEBUG 2015-08-05 13:10:29,278   124ms HomeController         Index              - Current value: 5
-DEBUG 2015-08-05 13:10:29,278   124ms HomeController         Index              - Current value: 6
-DEBUG 2015-08-05 13:10:29,278   124ms HomeController         Index              - Current value: 7
-DEBUG 2015-08-05 13:10:29,278   124ms HomeController         Index              - Current value: 8
-DEBUG 2015-08-05 13:10:29,279   125ms HomeController         Index              - Current value: 9
-DEBUG 2015-08-05 13:10:29,279   125ms HomeController         Index              - Current value: 10
-INFO  2015-08-05 13:10:29,279   125ms HomeController         Index              - End loop.
-INFO  2015-08-05 13:10:29,280   126ms HomeController         Index              - End GenerateDebugLog Method.
-ERROR 2015-08-05 13:10:29,307   153ms HomeController         Index              - Error! 
+   at lab.errorlogapps.Controllers.HomeController.Index() in d:\RaselAhmmed\MyLab\lab.errorlogapps\lab.errorlogapps\Controllers\HomeController.cs:line 29
+INFO  2015-05-18 16:11:50,678 17216ms HomeController         Index              - Starting GenerateDebugLog Method...
+DEBUG 2015-05-18 16:11:50,716 17254ms HomeController         Index              - No input parameters for method.
+INFO  2015-05-18 16:11:50,716 17254ms HomeController         Index              - Starting loop...
+DEBUG 2015-05-18 16:11:50,716 17254ms HomeController         Index              - Current value: 0
+DEBUG 2015-05-18 16:11:50,717 17255ms HomeController         Index              - Current value: 1
+DEBUG 2015-05-18 16:11:50,717 17255ms HomeController         Index              - Current value: 2
+DEBUG 2015-05-18 16:11:50,717 17255ms HomeController         Index              - Current value: 3
+DEBUG 2015-05-18 16:11:50,717 17255ms HomeController         Index              - Current value: 4
+DEBUG 2015-05-18 16:11:50,718 17256ms HomeController         Index              - Current value: 5
+DEBUG 2015-05-18 16:11:50,718 17256ms HomeController         Index              - Current value: 6
+DEBUG 2015-05-18 16:11:50,718 17256ms HomeController         Index              - Current value: 7
+DEBUG 2015-05-18 16:11:50,718 17256ms HomeController         Index              - Current value: 8
+DEBUG 2015-05-18 16:11:50,719 17257ms HomeController         Index              - Current value: 9
+DEBUG 2015-05-18 16:11:50,719 17257ms HomeController         Index              - Current value: 10
+INFO  2015-05-18 16:11:50,720 17258ms HomeController         Index              - End loop.
+INFO  2015-05-18 16:11:50,720 17258ms HomeController         Index              - End GenerateDebugLog Method.
+ERROR 2015-05-18 16:11:50,720 17258ms HomeController         Index              - Error! 
 System.Exception: Exception test!
-   at lab.errorlogapps.Controllers.HomeController.Index() in c:\Users\user\Documents\GitHub\ibaax-sample\lab.errorlogapps\lab.errorlogapps\Controllers\HomeController.cs:line 58
-INFO  2015-08-05 13:14:34,452 245298ms HomeController         Index              - Starting GenerateDebugLog Method...
-DEBUG 2015-08-05 13:14:34,452 245298ms HomeController         Index              - No input parameters for method.
-INFO  2015-08-05 13:14:34,453 245299ms HomeController         Index              - Starting loop...
-DEBUG 2015-08-05 13:14:34,453 245299ms HomeController         Index              - Current value: 0
-DEBUG 2015-08-05 13:14:34,453 245299ms HomeController         Index              - Current value: 1
-DEBUG 2015-08-05 13:14:34,454 245300ms HomeController         Index              - Current value: 2
-DEBUG 2015-08-05 13:14:34,454 245300ms HomeController         Index              - Current value: 3
-DEBUG 2015-08-05 13:14:34,454 245300ms HomeController         Index              - Current value: 4
-DEBUG 2015-08-05 13:14:34,454 245300ms HomeController         Index              - Current value: 5
-DEBUG 2015-08-05 13:14:34,455 245301ms HomeController         Index              - Current value: 6
-DEBUG 2015-08-05 13:14:34,455 245301ms HomeController         Index              - Current value: 7
-DEBUG 2015-08-05 13:14:34,457 245303ms HomeController         Index              - Current value: 8
-DEBUG 2015-08-05 13:14:34,457 245303ms HomeController         Index              - Current value: 9
-DEBUG 2015-08-05 13:14:34,459 245305ms HomeController         Index              - Current value: 10
-INFO  2015-08-05 13:14:34,459 245305ms HomeController         Index              - End loop.
-INFO  2015-08-05 13:14:34,459 245305ms HomeController         Index              - End GenerateDebugLog Method.
-ERROR 2015-08-05 13:14:34,484 245330ms HomeController         Index              - Error! 
-System.Exception: Exception test!
-   at lab.errorlogapps.Controllers.HomeController.Index() in c:\Users\user\Documents\GitHub\ibaax-sample\lab.errorlogapps\lab.errorlogapps\Controllers\HomeController.cs:line 58
-INFO  2015-08-05 13:14:50,611   145ms HomeController         Index              - Starting GenerateDebugLog Method...
-DEBUG 2015-08-05 13:14:50,624   158ms HomeController         Index              - No input parameters for method.
-INFO  2015-08-05 13:14:50,624   158ms HomeController         Index              - Starting loop...
-DEBUG 2015-08-05 13:14:50,625   159ms HomeController         Index              - Current value: 0
-DEBUG 2015-08-05 13:14:50,625   159ms HomeController         Index              - Current value: 1
-DEBUG 2015-08-05 13:14:50,625   159ms HomeController         Index              - Current value: 2
-DEBUG 2015-08-05 13:14:50,625   159ms HomeController         Index              - Current value: 3
-DEBUG 2015-08-05 13:14:50,625   159ms HomeController         Index              - Current value: 4
-DEBUG 2015-08-05 13:14:50,626   160ms HomeController         Index              - Current value: 5
-DEBUG 2015-08-05 13:14:50,626   160ms HomeController         Index              - Current value: 6
-DEBUG 2015-08-05 13:14:50,626   160ms HomeController         Index              - Current value: 7
-DEBUG 2015-08-05 13:14:50,626   160ms HomeController         Index              - Current value: 8
-DEBUG 2015-08-05 13:14:50,626   160ms HomeController         Index              - Current value: 9
-DEBUG 2015-08-05 13:14:50,627   161ms HomeController         Index              - Current value: 10
-INFO  2015-08-05 13:14:50,627   161ms HomeController         Index              - End loop.
-INFO  2015-08-05 13:14:50,627   161ms HomeController         Index              - End GenerateDebugLog Method.
-ERROR 2015-08-05 13:14:50,653   187ms HomeController         Index              - Error! 
-System.Exception: Exception test!
-   at lab.errorlogapps.Controllers.HomeController.Index() in c:\Users\user\Documents\GitHub\ibaax-sample\lab.errorlogapps\lab.errorlogapps\Controllers\HomeController.cs:line 58
-INFO  2015-08-05 13:14:56,045  5579ms HomeController         Index              - Starting GenerateDebugLog Method...
-DEBUG 2015-08-05 13:14:56,047  5581ms HomeController         Index              - No input parameters for method.
-INFO  2015-08-05 13:14:56,048  5582ms HomeController         Index              - Starting loop...
-DEBUG 2015-08-05 13:14:56,049  5583ms HomeController         Index              - Current value: 0
-DEBUG 2015-08-05 13:14:56,049  5583ms HomeController         Index              - Current value: 1
-DEBUG 2015-08-05 13:14:56,050  5584ms HomeController         Index              - Current value: 2
-DEBUG 2015-08-05 13:14:56,051  5585ms HomeController         Index              - Current value: 3
-DEBUG 2015-08-05 13:14:56,052  5586ms HomeController         Index              - Current value: 4
-DEBUG 2015-08-05 13:14:56,053  5587ms HomeController         Index              - Current value: 5
-DEBUG 2015-08-05 13:14:56,053  5587ms HomeController         Index              - Current value: 6
-DEBUG 2015-08-05 13:14:56,054  5588ms HomeController         Index              - Current value: 7
-DEBUG 2015-08-05 13:14:56,055  5589ms HomeController         Index              - Current value: 8
-DEBUG 2015-08-05 13:14:56,056  5590ms HomeController         Index              - Current value: 9
-DEBUG 2015-08-05 13:14:56,057  5591ms HomeController         Index              - Current value: 10
-INFO  2015-08-05 13:14:56,057  5591ms HomeController         Index              - End loop.
-INFO  2015-08-05 13:14:56,058  5592ms HomeController         Index              - End GenerateDebugLog Method.
-ERROR 2015-08-05 13:14:56,072  5606ms HomeController         Index              - Error! 
-System.Exception: Exception test!
-   at lab.errorlogapps.Controllers.HomeController.Index() in c:\Users\user\Documents\GitHub\ibaax-sample\lab.errorlogapps\lab.errorlogapps\Controllers\HomeController.cs:line 58
-INFO  2015-08-05 13:16:01,294 70828ms HomeController         Index              - Starting GenerateDebugLog Method...
-DEBUG 2015-08-05 13:16:01,295 70829ms HomeController         Index              - No input parameters for method.
-INFO  2015-08-05 13:16:01,295 70829ms HomeController         Index              - Starting loop...
-DEBUG 2015-08-05 13:16:01,295 70829ms HomeController         Index              - Current value: 0
-DEBUG 2015-08-05 13:16:01,295 70829ms HomeController         Index              - Current value: 1
-DEBUG 2015-08-05 13:16:01,296 70830ms HomeController         Index              - Current value: 2
-DEBUG 2015-08-05 13:16:01,296 70830ms HomeController         Index              - Current value: 3
-DEBUG 2015-08-05 13:16:01,296 70830ms HomeController         Index              - Current value: 4
-DEBUG 2015-08-05 13:16:01,296 70830ms HomeController         Index              - Current value: 5
-DEBUG 2015-08-05 13:16:01,297 70831ms HomeController         Index              - Current value: 6
-DEBUG 2015-08-05 13:16:01,297 70831ms HomeController         Index              - Current value: 7
-DEBUG 2015-08-05 13:16:01,297 70831ms HomeController         Index              - Current value: 8
-DEBUG 2015-08-05 13:16:01,297 70831ms HomeController         Index              - Current value: 9
-DEBUG 2015-08-05 13:16:01,298 70832ms HomeController         Index              - Current value: 10
-INFO  2015-08-05 13:16:01,298 70832ms HomeController         Index              - End loop.
-INFO  2015-08-05 13:16:01,298 70832ms HomeController         Index              - End GenerateDebugLog Method.
-ERROR 2015-08-05 13:16:01,324 70858ms HomeController         Index              - Error! 
-System.Exception: Exception test!
-   at lab.errorlogapps.Controllers.HomeController.Index() in c:\Users\user\Documents\GitHub\ibaax-sample\lab.errorlogapps\lab.errorlogapps\Controllers\HomeController.cs:line 58
-INFO  2015-08-05 13:16:41,470 111004ms HomeController         Index              - Starting GenerateDebugLog Method...
-DEBUG 2015-08-05 13:16:41,470 111004ms HomeController         Index              - No input parameters for method.
-INFO  2015-08-05 13:16:41,470 111004ms HomeController         Index              - Starting loop...
-DEBUG 2015-08-05 13:16:41,471 111005ms HomeController         Index              - Current value: 0
-DEBUG 2015-08-05 13:16:41,471 111005ms HomeController         Index              - Current value: 1
-DEBUG 2015-08-05 13:16:41,471 111005ms HomeController         Index              - Current value: 2
-DEBUG 2015-08-05 13:16:41,472 111006ms HomeController         Index              - Current value: 3
-DEBUG 2015-08-05 13:16:41,472 111006ms HomeController         Index              - Current value: 4
-DEBUG 2015-08-05 13:16:41,472 111006ms HomeController         Index              - Current value: 5
-DEBUG 2015-08-05 13:16:41,473 111007ms HomeController         Index              - Current value: 6
-DEBUG 2015-08-05 13:16:41,473 111007ms HomeController         Index              - Current value: 7
-DEBUG 2015-08-05 13:16:41,473 111007ms HomeController         Index              - Current value: 8
-DEBUG 2015-08-05 13:16:41,474 111008ms HomeController         Index              - Current value: 9
-DEBUG 2015-08-05 13:16:41,474 111008ms HomeController         Index              - Current value: 10
-INFO  2015-08-05 13:16:41,474 111008ms HomeController         Index              - End loop.
-INFO  2015-08-05 13:16:41,474 111008ms HomeController         Index              - End GenerateDebugLog Method.
-ERROR 2015-08-05 13:16:41,501 111035ms HomeController         Index              - Error! 
-System.Exception: Exception test!
-   at lab.errorlogapps.Controllers.HomeController.Index() in c:\Users\user\Documents\GitHub\ibaax-sample\lab.errorlogapps\lab.errorlogapps\Controllers\HomeController.cs:line 58
+   at lab.errorlogapps.Controllers.HomeController.Index() in d:\RaselAhmmed\MyLab\lab.errorlogapps\lab.errorlogapps\Controllers\HomeController.cs:line 31

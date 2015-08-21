@@ -13,34 +13,7 @@ namespace lab.errorlogapps.Controllers
         private AppDbContext _db = new AppDbContext();
         public ActionResult Index()
         {
-            HttpBrowserCapabilitiesBase browser = Request.Browser;
-            string browserInfo = "Browser Capabilities\n"
-                + "Type = " + browser.Type + "\n"
-                + "Name = " + browser.Browser + "\n"
-                + "Version = " + browser.Version + "\n"
-                + "Major Version = " + browser.MajorVersion + "\n"
-                + "Minor Version = " + browser.MinorVersion + "\n"
-                + "Platform = " + browser.Platform + "\n"
-                + "Is Beta = " + browser.Beta + "\n"
-                + "Is Crawler = " + browser.Crawler + "\n"
-                + "Is AOL = " + browser.AOL + "\n"
-                + "Is Win16 = " + browser.Win16 + "\n"
-                + "Is Win32 = " + browser.Win32 + "\n"
-                + "Supports Frames = " + browser.Frames + "\n"
-                + "Supports Tables = " + browser.Tables + "\n"
-                + "Supports Cookies = " + browser.Cookies + "\n"
-                + "Supports VBScript = " + browser.VBScript + "\n"
-                + "Supports JavaScript = " +
-                    browser.EcmaScriptVersion.ToString() + "\n"
-                + "Supports Java Applets = " + browser.JavaApplets + "\n"
-                + "Supports ActiveX Controls = " + browser.ActiveXControls
-                      + "\n"
-                + "Supports JavaScript Version = " +
-                    browser["JavaScriptVersion"] + "\n";
-
-
-
-            //var categoryList = _db.Category.ToList();
+            var categoryList = _db.Category.ToList();
             _logger.Info("Starting GenerateDebugLog Method...");
             _logger.Debug("No input parameters for method.");
 
@@ -65,5 +38,18 @@ namespace lab.errorlogapps.Controllers
             return View();
         }
 
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your apps description page.";
+
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
     }
 }

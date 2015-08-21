@@ -180,6 +180,7 @@
     <Compile Include="Helpers\ExportCsvFileHelper.cs" />
     <Compile Include="Helpers\ExportExcelFileHelper.cs" />
     <Compile Include="Helpers\ExportFileHelper.cs" />
+    <Compile Include="Helpers\ExportPdfFileHelper.cs" />
     <Compile Include="Models\AppDbContext.cs" />
     <Compile Include="Models\AppModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

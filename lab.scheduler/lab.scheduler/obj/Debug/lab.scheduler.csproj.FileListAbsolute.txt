@@ -1,1 +1,2 @@
 D:\RaselAhmmed\MyLab\lab.scheduler\lab.scheduler\bin\Debug\lab.scheduler.exe.config
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler\bin\Debug\lab.scheduler.exe.config

@@ -1,0 +1,15 @@
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.exe.config
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\Common.Logging.Core.dll
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\Common.Logging.dll
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\Quartz.dll
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\Common.Logging.pdb
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\Common.Logging.xml
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\Common.Logging.Core.pdb
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\Common.Logging.Core.xml
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\Quartz.pdb
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\Quartz.xml
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\obj\Release\lab.scheduler.winservice.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\obj\Release\lab.scheduler.winservice.exe
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\obj\Release\lab.scheduler.winservice.pdb
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Release\lab.scheduler.winservice.pdb

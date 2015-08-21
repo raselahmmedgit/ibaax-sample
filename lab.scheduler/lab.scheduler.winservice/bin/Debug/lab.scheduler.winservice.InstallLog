@@ -1,0 +1,13 @@
+﻿Installing assembly 'C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Debug\lab.scheduler.winservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Debug\lab.scheduler.winservice.InstallLog
+   assemblypath = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Debug\lab.scheduler.winservice.exe
+Installing service iBaax Windows Service...
+Service iBaax Windows Service has been successfully installed.
+Creating EventLog source iBaax Windows Service in log Application...
+Committing assembly 'C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Debug\lab.scheduler.winservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Debug\lab.scheduler.winservice.InstallLog
+   assemblypath = C:\Users\user\Documents\GitHub\ibaax-sample\lab.scheduler\lab.scheduler.winservice\bin\Debug\lab.scheduler.winservice.exe

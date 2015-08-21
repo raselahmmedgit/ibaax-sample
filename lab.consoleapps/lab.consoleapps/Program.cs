@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -16,6 +18,25 @@ namespace lab.consoleapps
         {
             Console.WriteLine("Start");
 
+            SendMail("Hello", "This is test");
+            //SendMailByHotMail("Hello", "This is test");
+
+            var date = DateTime.Today;
+            var currentDate = DateTime.Today.ToString("yyyy-MM-dd");
+
+            //DateTime startOfWeek = DateTime.Today.AddDays(-1 * (int)(DateTime.Today.DayOfWeek));
+
+            DateTime startOfWeek = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek);
+            DateTime endOfWeek = startOfWeek.AddDays(7);
+            DateTime endOfLastWeek = startOfWeek.AddDays(-1);
+
+            var lastDayOfMonth = DateTime.DaysInMonth(date.Year, date.Month);
+
+            DateTime firstOfThisMonth = new DateTime(date.Year, date.Month, 1);
+            DateTime firstOfNextMonth = new DateTime(date.Year, date.Month, 1).AddMonths(1);
+            DateTime lastOfThisMonth = firstOfNextMonth.AddDays(-1);
+
+            DatetimeMatch();
             LinqTest();
 
             var RoleId = Convert.ToInt32(RoleEnum.SuperAdmin);
@@ -71,6 +92,109 @@ namespace lab.consoleapps
             Console.Read();
         }
 
+        public static void SendMail(string subject, string body)
+        {
+            try
+            {
+                //var fromAddress = new MailAddress("rasel.tester@gmail.com", "Rasel Tester");
+                //var toAddress = new MailAddress("rasel.ibaax@outlook.com", "Rasel iBaax");
+                //const string fromPassword = "@@987654";
+
+                //var smtp = new SmtpClient
+                //{
+                //    Host = "smtp.gmail.com",
+                //    Port = 587,
+                //    EnableSsl = true,
+                //    DeliveryMethod = SmtpDeliveryMethod.Network,
+                //    UseDefaultCredentials = false,
+                //    Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                //};
+                //using (var message = new MailMessage(fromAddress, toAddress)
+                //{
+                //    Subject = subject,
+                //    Body = body
+                //})
+                //{
+                //    smtp.Send(message);
+                //}
+
+                string smtpAddress = "smtp.gmail.com";
+                int portNumber = 587;
+                bool enableSSL = true;
+
+                string emailFrom = "rasel.tester@gmail.com";
+                string password = "@@987654";
+                string emailTo = "rasel.ibaax@outlook.com";
+
+                using (MailMessage mail = new MailMessage())
+                {
+                    mail.From = new MailAddress(emailFrom);
+                    mail.To.Add(emailTo);
+                    mail.Subject = subject;
+                    mail.Body = body;
+                    mail.IsBodyHtml = true;
+                    // Can set to false, if you are sending pure text.
+
+                    using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
+                    {
+                        smtp.Credentials = new NetworkCredential(emailFrom, password);
+                        smtp.EnableSsl = enableSSL;
+                        smtp.Send(mail);
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static void SendMailByHotMail(string subject, string body)
+        {
+            try
+            {
+                //var fromAddress = new MailAddress("rasel.tester@outlook.com", "Rasel Tester");
+                //var toAddress = new MailAddress("rasel.ibaax@outlook.com", "Rasel iBaax");
+                //const string fromPassword = "@@987654";
+
+                //var smtp = new SmtpClient
+                //{
+                //    Host = "smtp.live.com",
+                //    Port = 587,
+                //    EnableSsl = true,
+                //    DeliveryMethod = SmtpDeliveryMethod.Network,
+                //    UseDefaultCredentials = false,
+                //    Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                //};
+                //using (var message = new MailMessage(fromAddress, toAddress)
+                //{
+                //    Subject = subject,
+                //    Body = body
+                //})
+                //{
+                //    smtp.Send(message);
+                //}
+
+                OpaqueMail.Net.MailMessage message = new OpaqueMail.Net.MailMessage("rasel.tester@outlook.com", "rasel.ibaax@outlook.com");
+                message.Subject = subject;
+                message.Body = body;
+                var client = new OpaqueMail.Net.SmtpClient
+                {
+                    Host = "smtp.live.com",
+                    Port = 587,
+                    Credentials = new System.Net.NetworkCredential("rasel.tester@outlook.com", "@@987654"),
+                    EnableSsl = true
+                };
+                client.Send(message);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public enum RoleEnum : int
         {
             SuperAdmin = 1,
@@ -93,6 +217,23 @@ namespace lab.consoleapps
             streamWriter.WriteLine(DateTime.Now.ToString() + " : " + message);
             streamWriter.Flush();
             streamWriter.Close();
+        }
+
+        private static void DatetimeMatch()
+        {
+            DateTime dateTime1 = new DateTime(2015, 07, 25);
+            DateTime dateTime2 = DateTime.Now;
+
+            if (dateTime1 == dateTime2)
+            {
+                
+            }
+
+            if (dateTime1.Date.Equals(dateTime2.Date))
+            {
+                // the dates are equal
+                Console.WriteLine("Date 1 :" + dateTime1.Date + " Date 2 :" + dateTime2.Date);
+            }
         }
 
         private static void LinqTest()

@@ -62,6 +62,20 @@ namespace lab.exportfile.Controllers
             ExportExcelFileHelper.ExportToExcelFile(_productList, fileName);
         }
 
+        //PDF
+        protected FileContentResult ViewPdf(string pageTitle, string viewName, object model)
+        {
+            // Render the view html to a string.
+            string htmlText = HtmlViewRenderer.RenderViewToString(this, viewName, model);
+
+            // Let the html be rendered into a PDF document through iTextSharp.
+            byte[] buffer = standardPdfRenderer.Render(htmlText, pageTitle);
+
+            // Return the PDF as a binary stream to the client.
+            return File(buffer, "application/pdf", "file.pdf");
+        }
+
+
         #region Stream
 
         [HttpPost]

@@ -10,6 +10,12 @@ namespace lab.scheduler
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Scheduler Start");
+
+            BootStrapper.Run();
+
+            Console.WriteLine("Scheduler End");
+            Console.ReadLine();
         }
     }
 }

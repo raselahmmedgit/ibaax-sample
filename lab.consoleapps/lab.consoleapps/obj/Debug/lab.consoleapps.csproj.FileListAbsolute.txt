@@ -8,3 +8,14 @@ D:\RaselAhmmed\MyLab\lab.consoleapps\lab.consoleapps\bin\Debug\EntityFramework.S
 D:\RaselAhmmed\MyLab\lab.consoleapps\lab.consoleapps\obj\Debug\lab.consoleapps.csprojResolveAssemblyReference.cache
 D:\RaselAhmmed\MyLab\lab.consoleapps\lab.consoleapps\obj\Debug\lab.consoleapps.exe
 D:\RaselAhmmed\MyLab\lab.consoleapps\lab.consoleapps\obj\Debug\lab.consoleapps.pdb
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.consoleapps\lab.consoleapps\bin\Debug\lab.consoleapps.exe.config
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.consoleapps\lab.consoleapps\obj\Debug\lab.consoleapps.exe
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.consoleapps\lab.consoleapps\obj\Debug\lab.consoleapps.pdb
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.consoleapps\lab.consoleapps\bin\Debug\lab.consoleapps.exe
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.consoleapps\lab.consoleapps\bin\Debug\lab.consoleapps.pdb
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.consoleapps\lab.consoleapps\bin\Debug\EntityFramework.dll
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.consoleapps\lab.consoleapps\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.consoleapps\lab.consoleapps\bin\Debug\EntityFramework.xml
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.consoleapps\lab.consoleapps\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.consoleapps\lab.consoleapps\obj\Debug\lab.consoleapps.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\ibaax-sample\lab.consoleapps\lab.consoleapps\bin\Debug\OpaqueMail.Net.dll
