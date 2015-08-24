@@ -20,6 +20,8 @@ namespace lab.scheduler.winservice
                 new iBaaxService() 
             };
             ServiceBase.Run(servicesToRun);
+
+            Console.ReadLine();
         }
     }
 }

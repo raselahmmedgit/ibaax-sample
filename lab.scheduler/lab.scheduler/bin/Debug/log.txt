@@ -1,1 +1,6 @@
 21-Aug-2015 5:05:12 PM : Configuration system failed to initialize
+23-Aug-2015 5:39:16 PM : Invalid URI: The URI is empty.
+23-Aug-2015 5:44:01 PM : Invalid URI: The URI is empty.
+23-Aug-2015 5:51:41 PM : Invalid URI: The URI is empty.
+23-Aug-2015 5:55:54 PM : Invalid URI: The URI is empty.
+23-Aug-2015 6:10:37 PM : Invalid URI: The URI is empty.

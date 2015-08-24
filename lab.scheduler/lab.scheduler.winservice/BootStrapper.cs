@@ -15,6 +15,7 @@ namespace lab.scheduler.winservice
         {
             try
             {
+                Console.WriteLine("BootStrapper.Run()");
                 //ExecuteSchedule();
                 ExecuteMySchedule();
             }

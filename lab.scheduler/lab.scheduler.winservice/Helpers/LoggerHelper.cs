@@ -24,9 +24,9 @@ namespace lab.scheduler.winservice.Helpers
             //StreamWriter streamWriter = null;
             //string myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string logPath = AppHelper.GetAppSettingsString("LogPath");
-            //using (StreamWriter streamWriter = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "logtweeter.txt", true))
-            //using (StreamWriter streamWriter = new StreamWriter(myDocumentsPath + @"\logtweeter.txt", true))
-            using (StreamWriter streamWriter = new StreamWriter(logPath + @"\logtweeter.txt", true))
+            //using (StreamWriter streamWriter = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "log.txt", true))
+            //using (StreamWriter streamWriter = new StreamWriter(myDocumentsPath + @"\log.txt", true))
+            using (StreamWriter streamWriter = new StreamWriter(logPath + @"\log.txt", true))
             {
                 //streamWriter = new StreamWriter(myDocumentsPath + @"\SalesCampaignScheduleServiceLog.txt", true);
                 //streamWriter = new StreamWriter(@"C:\SalesCampaignScheduleServiceLog.txt", true);

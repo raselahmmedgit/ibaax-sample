@@ -23,12 +23,12 @@ namespace lab.scheduler.winservice
             serviceProcessInstaller.Password = null;
 
             //# Service Information
-            serviceInstaller.DisplayName = "iBaax Windows Service";
+            serviceInstaller.DisplayName = "ibaaxRasel.lab.schedule";
             serviceInstaller.StartType = ServiceStartMode.Automatic;
 
             //# This must be identical to the WindowsService.ServiceBase name
             //# set in the constructor of WindowsService.cs
-            serviceInstaller.ServiceName = "iBaax Windows Service";
+            serviceInstaller.ServiceName = "ibaaxRasel.lab.schedule";
 
             this.Installers.Add(serviceProcessInstaller);
             this.Installers.Add(serviceInstaller);
