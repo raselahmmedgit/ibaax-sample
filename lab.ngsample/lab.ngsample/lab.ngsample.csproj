@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.4\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -168,15 +171,45 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TaskController.cs" />
+    <Compile Include="Controllers\TaskDocumentController.cs" />
+    <Compile Include="Controllers\TaskBaseController.cs" />
+    <Compile Include="Controllers\TaskNoteController.cs" />
+    <Compile Include="Controllers\TaskTagCategoryController.cs" />
+    <Compile Include="Controllers\TaskTeamController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Helpers\ExceptionHelper.cs" />
+    <Compile Include="Helpers\LoggerHelper.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AppDbContext.cs" />
+    <Compile Include="Models\AppModels.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\DocumentBaseModel.cs" />
+    <Compile Include="Models\EntityBaseModel.cs" />
+    <Compile Include="Models\NoteBaseModel.cs" />
+    <Compile Include="Models\Repository\BaseRepository.cs" />
+    <Compile Include="Models\Repository\CompanyRepository.cs" />
+    <Compile Include="Models\Repository\ContactRepository.cs" />
+    <Compile Include="Models\Repository\IBaseRepository.cs" />
+    <Compile Include="Models\Repository\ContactDocumentCategoryRepository.cs" />
+    <Compile Include="Models\Repository\ContactDocumentRepository.cs" />
+    <Compile Include="Models\Repository\CompanyDocumentCategoryRepository.cs" />
+    <Compile Include="Models\Repository\CompanyDocumentRepository.cs" />
+    <Compile Include="Models\Repository\TaskRepository.cs" />
+    <Compile Include="Models\Repository\TaskStatusCategoryRepository.cs" />
+    <Compile Include="Models\Repository\TaskPriorityCategoryRepository.cs" />
+    <Compile Include="Models\Repository\TaskTeamRepository.cs" />
+    <Compile Include="Models\Repository\TaskDocumentRepository.cs" />
+    <Compile Include="Models\Repository\TaskNoteRepository.cs" />
+    <Compile Include="Models\Repository\TaskTypeCategoryRepository.cs" />
+    <Compile Include="Models\Repository\TaskTagCategoryRepository.cs" />
+    <Compile Include="Models\Repository\TaskTagMapRepository.cs" />
+    <Compile Include="Models\Repository\UserRepository.cs" />
+    <Compile Include="Models\TaskModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -212,36 +245,14 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
