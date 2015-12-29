@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Mandrill Email Verify";
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<hgroup class="title">
+    <h1>Email Verification By Mandrill</h1>
+</hgroup>
+<section id="loginForm">
+    <h2>Please check your email for validation.</h2>
+
+    <fieldset>
+        <legend>Your Email</legend>
+        <ol>
+            <li>
+                <label>Your Email</label>
+                <input type="text" id="txtEmail" name="txtEmail" class="" value="" />
+            </li>
+        </ol>
+        <input type="button" value="Send Email" id="btnSendEmail" />
+        <br/>
+        <br />
+        <input type="button" value="Send Email" id="btnSendEmailDefault" />
+    </fieldset>
+
+    <div id="dvEmailValidateResult">
+
+    </div>
+</section>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        //-----------------------------------------------------
+
+        $('#btnSendEmailDefault').unbind("click").bind("click", function (e) {
+
+            e.preventDefault();
+            var postUrl = "/Mandrill/SendEmailAddress";
+
+            $.ajax({
+                url: postUrl,
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
+                success: function (result) {
+                    if (result.success) {
+                        console.log(result.data);
+                    }
+                    else {
+                        console.log(result.data);
+                    }
+                },
+                error: function (objAjaxRequest, strError) {
+                    var respText = objAjaxRequest.responseText;
+                    console.log(respText);
+                }
+
+            });
+
+            return false;
+
+        });
+
+        $('#btnSendEmail').unbind("click").bind("click", function (e) {
+
+            e.preventDefault();
+            var emailAddress = $('#txtEmail').val();
+            var postUrl = "/Home/VerifyEmailAddressAjax";
+            var postData = { emailAddress: emailAddress };
+
+            $.ajax({
+                url: postUrl,
+                type: 'POST',
+                dataType: 'json',
+                data: postData,
+                contentType: 'application/json; charset=utf-8',
+                success: function (result) {
+                    if (result.success) {
+                        console.log(result.data);
+                    }
+                    else {
+                        console.log(result.data);
+                    }
+                },
+                error: function (objAjaxRequest, strError) {
+                    var respText = objAjaxRequest.responseText;
+                    console.log(respText);
+                }
+
+            });
+
+            return false;
+
+        });
+
+        //-----------------------------------------------------
+
+    });
+
+</script>

@@ -1,0 +1,59 @@
+﻿@using lab.emailverify.ViewModels.
+
+<fieldset>
+    <legend>Email Validation Report</legend>
+    <ol>
+        <li>
+            <label>Syntax Validation (@Model.SyntaxStatus)</label>
+            @Model.SyntaxMessage
+        </li>
+        <li>
+            <label>Address (without comments and folding white spaces)</label>
+            @Model.EmailAddress
+        </li>
+        <li>
+            <label>Local Part</label>
+            @Model.EmailAddressLocalPart
+        </li>
+        <li>
+            <label>Domain Part</label>
+            @Model.EmailAddressDomainPart
+        </li>
+        <li>
+            <label>ASCII Domain Part</label>
+            @Model.AsciiEmailAddressDomainPart
+        </li>
+        <li>
+            <label>Role Accounts Detection (@Model.RoleAccountStatus)</label>
+            @Html.Raw(Model.RoleAccountMessage)
+        </li>
+        <li>
+            <label>Syntax validation, ISP-specific (@Model.SpecificSyntaxStatus)</label>
+            @Html.Raw(Model.SpecificSyntaxMessage)
+        </li>
+        <li>
+            <label>Disposable email address (DEA) validation (@Model.DeaDomainStatus)</label>
+            @Html.Raw(Model.DeaDomainMessage)
+        </li>
+        <li>
+            <label>DNS records validation (@Model.DnsStatus)</label>
+            @Html.Raw(Model.DnsMessage)
+        </li>
+        <li>
+            <label>Disposable email address (DEA) validation, second pass (@Model.DeaMailExchangerStatus)</label>
+            @Html.Raw(Model.DeaMailExchangerMessage)
+        </li>
+        <li>
+            <label>SMTP server validation (@Model.SmtpStatus)</label>
+            @Html.Raw(Model.SmtpMessage)
+        </li>
+        <li>
+            <label>Mailbox Validation (@Model.MailboxStatus)</label>
+            @Html.Raw(Model.MailboxMessage)
+        </li>
+        <li>
+            <label>Catch-all mail exchanger validation (@Model.CatchAllStatus)</label>
+            @Html.Raw(Model.CatchAllMessage)
+        </li>
+    </ol>
+</fieldset>

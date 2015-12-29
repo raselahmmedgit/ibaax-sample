@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Cobisi Email Verify";
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<hgroup class="title">
+    <h1>Email Verification By Cobisi</h1>
+</hgroup>
+<section id="loginForm">
+    <h2>Please check your email for validation.</h2>
+
+    <fieldset>
+        <legend>Your Email</legend>
+        <ol>
+            <li>
+                <label>Your Email</label>
+                <input type="text" id="txtEmail" name="txtEmail" class="" value="" />
+            </li>
+        </ol>
+        <input type="button" value="Validate" id="btnEmailValidate" />
+    </fieldset>
+    
+    <div id="dvEmailValidateResult">
+
+    </div>
+</section>
+<script src="~/Scripts/App/EmailVerification.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        EmailVerification.init();
+    });
+</script>

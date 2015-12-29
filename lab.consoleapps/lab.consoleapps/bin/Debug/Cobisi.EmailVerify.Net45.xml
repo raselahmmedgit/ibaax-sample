@@ -1,0 +1,1580 @@
+<?xml version="1.0"?>
+<!--Processed by Cobisi XmlDocFilter v0.2.4270.14316 on 3/13/2014 12:34:49 PM.-->
+<doc>
+  <assembly>
+    <name>Cobisi.EmailVerify.Net45</name>
+  </assembly>
+  <members>
+    <member name="T:Cobisi.EmailVerify.ComponentModel.ICancellableOperation">
+      <summary>
+            Contains a method which allows to cancel a pending asynchronous operation, in a way which is compatible
+            with both the IAsyncResult and the Task-based asynchronous patterns.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.ComponentModel.ICancellableOperation.Cancel">
+      <summary>
+            Cancels a pending asynchronous operation.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.ComponentModel.IPropertyBag">
+      <summary>
+            Defines properties and methods which a property bag must expose. A property bag is a storage entity which
+            allows to set and retrieve values by way of a key.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.ComponentModel.IPropertyBag.ContainsProperty(System.Object)">
+      <summary>
+            Returns <see langword="true">true</see> if the property bag contains a value for the specified key.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.ComponentModel.IVerificationStrategy`2.BeginVerify(Cobisi.EmailVerify.VerificationGroup,`1,System.Int32,System.AsyncCallback,System.Object)">
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="E:Cobisi.EmailVerify.ComponentModel.IVerificationStrategy`2.VerificationStarted">
+      <summary>
+            Occurs when the component starts processing a single verification task.
+            </summary>
+    </member>
+    <member name="E:Cobisi.EmailVerify.ComponentModel.IVerificationStrategy`2.VerificationCompleted">
+      <summary>
+            Occurs when the component finished processing a single verification task.
+            </summary>
+    </member>
+    <member name="E:Cobisi.EmailVerify.ComponentModel.IVerificationStrategy`2.VerificationLevelStarted">
+      <summary>
+            Occurs when the component starts processing a verification level for a single verification task.
+            </summary>
+    </member>
+    <member name="E:Cobisi.EmailVerify.ComponentModel.IVerificationStrategy`2.VerificationLevelCompleted">
+      <summary>
+            Occurs when the component finished processing a verification level for a single verification task.
+            </summary>
+    </member>
+    <member name="E:Cobisi.EmailVerify.ComponentModel.IVerificationStrategy`2.VerificationGroupStarted">
+      <summary>
+            Occurs when the component starts processing a group of related e-mail address verification tasks.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="E:Cobisi.EmailVerify.ComponentModel.IVerificationStrategy`2.VerificationGroupProgressChanged">
+      <summary>
+            Occurs when a progress change happens while processing a group of related e-mail address verification tasks.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="E:Cobisi.EmailVerify.ComponentModel.IVerificationStrategy`2.VerificationGroupCompleted">
+      <summary>
+            Occurs when the component finished processing a group of related e-mail address verification tasks.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="E:Cobisi.EmailVerify.ComponentModel.IVerificationStrategy`2.LocalEndPointBinding">
+      <summary>
+            Occurs when the component needs to bind itself to a local endpoint, just before connecting to an external host.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="E:Cobisi.EmailVerify.ComponentModel.IVerificationStrategy`2.SocketConnecting">
+      <summary>
+            Occurs when the component needs to configure a proxy server for its outgoing connections.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="T:Cobisi.EmailVerify.ComponentModel.PropertyBag">
+      <summary>
+            Represents a base thread-safe implementation for the <see cref="T:Cobisi.EmailVerify.ComponentModel.IPropertyBag">IPropertyBag interface</see>, which also allows for XML serialization by way of the
+            <see cref="T:System.Xml.Serialization.IXmlSerializable">IXmlSerializable interface</see>.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.DataAnnotations.EmailAddressAttribute">
+      <summary>
+            Specifies that a data field value must be a verified email address.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.DataAnnotations.EmailAddressValidationResult">
+      <summary>
+            Represents an email verification result, suitable for the <see cref="N:System.ComponentModel.DataAnnotations">Data Annotations</see>
+            validation model.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.DataAnnotations.EmailAddressValidationResult.#ctor(Cobisi.EmailVerify.Verification,System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Cobisi.EmailVerify.DataAnnotations.EmailAddressValidationResult" /> class.
+            </summary>
+      <param name="verification">The verification.</param>
+      <param name="errorMessage">The error message.</param>
+    </member>
+    <member name="M:Cobisi.EmailVerify.DataAnnotations.EmailAddressValidationResult.#ctor(Cobisi.EmailVerify.Verification,System.String,System.Collections.Generic.IEnumerable{System.String})">
+      <summary>
+            Initializes a new instance of the <see cref="T:Cobisi.EmailVerify.DataAnnotations.EmailAddressValidationResult" /> class.
+            </summary>
+      <param name="verification">The verification.</param>
+      <param name="errorMessage">The error message.</param>
+      <param name="memberNames">The member names.</param>
+      <exception cref="T:System.ArgumentNullException">verification</exception>
+    </member>
+    <member name="P:Cobisi.EmailVerify.DataAnnotations.EmailAddressValidationResult.Verification">
+      <summary>
+            Gets the <see cref="T:Cobisi.EmailVerify.Verification">verification instance</see> which is bound to this result.
+            This object can be used to inspect the result of the validation process further and retrieve useful details.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.Strategies.VerificationStrategy">
+      <summary>
+            Defines a base class for email verification strategies.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.Strategies.VerificationStrategy.OnLocalEndPointBinding(Cobisi.EmailVerify.LocalEndPointBindingEventArgs)">
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="M:Cobisi.EmailVerify.Strategies.VerificationStrategy.BeginVerify(Cobisi.EmailVerify.VerificationGroup,Cobisi.EmailVerify.VerificationSettings,System.Int32,System.AsyncCallback,System.Object)">
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="E:Cobisi.EmailVerify.Strategies.VerificationStrategy.LocalEndPointBinding">
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="E:Cobisi.EmailVerify.Strategies.VerificationStrategy.SocketConnecting">
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="E:Cobisi.EmailVerify.Strategies.VerificationStrategy.VerificationGroupStarted">
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="E:Cobisi.EmailVerify.Strategies.VerificationStrategy.VerificationGroupProgressChanged">
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="E:Cobisi.EmailVerify.Strategies.VerificationStrategy.VerificationGroupCompleted">
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationEngine">
+      <summary>
+            Verifies e-mail addresses using different techniques and accuracy levels.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.RunAsync(Cobisi.EmailVerify.Verification,Cobisi.EmailVerify.VerificationLevel,System.Threading.CancellationToken)">
+      <summary>
+            Runs the email address verification, up to the specified level, as an asynchronous operation using a task object.
+            </summary>
+      <param name="verification">A <see cref="T:Cobisi.EmailVerify.Verification">Verification</see> containing both inputs and, after
+            the asynchronous execution completes, the outputs of the verification process.</param>
+      <returns>A <see cref="T:System.Threading.Tasks.Task">Task</see> that represents the asynchronous operation.</returns>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.RunAsync(Cobisi.EmailVerify.Verification,Cobisi.EmailVerify.ComponentModel.IVerificationStrategy{Cobisi.EmailVerify.VerificationSteps.VerificationStepResult,Cobisi.EmailVerify.VerificationSettings},System.Threading.CancellationToken)">
+      <summary>
+            Runs the email address verification, using the specified strategy, as an asynchronous operation using a task object.
+            </summary>
+      <param name="verification">A <see cref="T:Cobisi.EmailVerify.Verification">Verification</see> containing both inputs and, after
+            the asynchronous execution completes, the outputs of the verification process.</param>
+      <returns>A <see cref="T:System.Threading.Tasks.Task">Task</see> that represents the asynchronous operation.</returns>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.RunAsync(Cobisi.EmailVerify.VerificationGroup,Cobisi.EmailVerify.VerificationLevel,System.Threading.CancellationToken)">
+      <summary>
+            Runs the email address verification, up to the specified level, as an asynchronous operation using a task object.
+            </summary>
+      <param name="verificationGroup">A <see cref="T:Cobisi.EmailVerify.VerificationGroup">VerificationGroup</see> containing the verifications to process.</param>
+      <returns>A <see cref="T:System.Threading.Tasks.Task">Task</see> that represents the asynchronous operation.</returns>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.RunAsync(Cobisi.EmailVerify.VerificationGroup,Cobisi.EmailVerify.ComponentModel.IVerificationStrategy{Cobisi.EmailVerify.VerificationSteps.VerificationStepResult,Cobisi.EmailVerify.VerificationSettings},System.Threading.CancellationToken)">
+      <summary>
+            Runs the email address verification, using the specified strategy, as an asynchronous operation using a task object.
+            </summary>
+      <param name="verificationGroup">A <see cref="T:Cobisi.EmailVerify.VerificationGroup">VerificationGroup</see> containing the verifications to process.</param>
+      <returns>A <see cref="T:System.Threading.Tasks.Task">Task</see> that represents the asynchronous operation.</returns>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.BeginRun(Cobisi.EmailVerify.Verification,Cobisi.EmailVerify.VerificationLevel,System.AsyncCallback,System.Object)">
+      <summary>
+            Begins an asynchronous verification of the given <see cref="T:Cobisi.EmailVerify.Verification">Verification</see>, up to the specified level.
+            </summary>
+      <remarks>This method uses the IAsyncResult pattern for anynchronous purposes; to use an event-based pattern please see
+            the <see cref="M:Cobisi.EmailVerify.VerificationEngine.RunAsync(Cobisi.EmailVerify.Verification,Cobisi.EmailVerify.VerificationLevel,System.Threading.CancellationToken)">VerifyAsync</see> method and its overloads.</remarks>
+      <param name="verification">A <see cref="T:Cobisi.EmailVerify.Verification">Verification</see> containing both inputs and, after
+            the asynchronous execution completes, the outputs of the verification process.</param>
+      <param name="callback">The method that is executed when the execution performed by <see cref="!:BeginVerify">BeginRun</see> completes.</param>
+      <param name="state">An object that contains any additional user-defined data.</param>
+      <returns>An <see cref="T:System.IAsyncResult">IAsyncResult</see> that represents the asynchronous call.</returns>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.BeginRun(Cobisi.EmailVerify.Verification,Cobisi.EmailVerify.ComponentModel.IVerificationStrategy{Cobisi.EmailVerify.VerificationSteps.VerificationStepResult,Cobisi.EmailVerify.VerificationSettings},System.AsyncCallback,System.Object)">
+      <summary>
+            Begins an asynchronous verification of the given <see cref="T:Cobisi.EmailVerify.Verification">Verification</see>, up to the specified level.
+            </summary>
+      <remarks>This method uses the IAsyncResult pattern for anynchronous purposes; to use an event-based pattern please see
+            the <see cref="M:Cobisi.EmailVerify.VerificationEngine.RunAsync(Cobisi.EmailVerify.Verification,Cobisi.EmailVerify.VerificationLevel,System.Threading.CancellationToken)">VerifyAsync</see> method and its overloads.</remarks>
+      <param name="verification">A <see cref="T:Cobisi.EmailVerify.Verification">Verification</see> containing both inputs and, after
+            the asynchronous execution completes, the outputs of the verification process.</param>
+      <param name="callback">The method that is executed when the execution performed by <see cref="!:BeginVerify">BeginRun</see> completes.</param>
+      <param name="state">An object that contains any additional user-defined data.</param>
+      <returns>An <see cref="T:System.IAsyncResult">IAsyncResult</see> that represents the asynchronous call.</returns>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.BeginRun(Cobisi.EmailVerify.VerificationGroup,Cobisi.EmailVerify.ComponentModel.IVerificationStrategy{Cobisi.EmailVerify.VerificationSteps.VerificationStepResult,Cobisi.EmailVerify.VerificationSettings},System.AsyncCallback,System.Object)">
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.BeginRun(Cobisi.EmailVerify.VerificationGroup,Cobisi.EmailVerify.VerificationLevel,System.AsyncCallback,System.Object)">
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.BeginRun(Cobisi.EmailVerify.VerificationGroup,Cobisi.EmailVerify.VerificationLevel,System.Int32,System.AsyncCallback,System.Object)">
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.BeginRun(Cobisi.EmailVerify.VerificationGroup,Cobisi.EmailVerify.ComponentModel.IVerificationStrategy{Cobisi.EmailVerify.VerificationSteps.VerificationStepResult,Cobisi.EmailVerify.VerificationSettings},System.Int32,System.AsyncCallback,System.Object)">
+      <summary>
+            Verifies a set of e-mail addresses in parallel using a <see cref="T:Cobisi.EmailVerify.VerificationGroup">VerificationGroup</see>, which
+            represents a collection of related <see cref="T:Cobisi.EmailVerify.Verification">Verification</see>.
+            <remarks><para>
+                The <see cref="T:Cobisi.EmailVerify.VerificationGroup">VerificationGroup</see> type implements a highly optimized
+                algorithm that internally sorts the contained tasks in order to achieve the best possible degree of parallelism.
+                </para></remarks></summary>
+      <param name="group">A <see cref="T:Cobisi.EmailVerify.VerificationGroup">VerificationGroup</see> which contains the collection of e-mail
+            address verifications to perform.</param>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.EndRun(System.IAsyncResult)">
+      <summary>
+            Handles the end of an asynchronous verification started with the <see cref="M:Cobisi.EmailVerify.VerificationEngine.BeginRun(Cobisi.EmailVerify.Verification,Cobisi.EmailVerify.VerificationLevel,System.AsyncCallback,System.Object)">BeginRun</see> method.
+            </summary>
+      <remarks>This method uses the IAsyncResult pattern for anynchronous purposes; to use an event-based pattern please see
+            the <see cref="M:Cobisi.EmailVerify.VerificationEngine.RunAsync(Cobisi.EmailVerify.Verification,Cobisi.EmailVerify.VerificationLevel,System.Threading.CancellationToken)">VerifyAsync</see> method and its overloads.</remarks>
+      <param name="result">An <see cref="T:System.IAsyncResult">IAsyncResult</see> that represents the asynchronous call to end.</param>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.CancelRun(System.IAsyncResult)">
+      <summary>
+            Cancels a pending asynchronous verification or verification group started with the <see cref="!:BeginVerify">BeginRun</see> method.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.#ctor">
+      <summary>
+            Initializes a new instance of the VerificationEngine class and sets up default settings values.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.#ctor(System.ComponentModel.IContainer)">
+      <summary>
+            Initializes a new instance of the VerificationEngine class with a container and sets up default settings values.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.Run(System.String,Cobisi.EmailVerify.VerificationLevel,Cobisi.EmailVerify.VerificationSettings)">
+      <summary>
+            Verifies an email address up to the given level, using the specified settings.
+            </summary>
+      <param name="emailAddress">The text representing the email address to verify.</param>
+      <param name="level">A <see cref="T:Cobisi.EmailVerify.VerificationLevel">VerificationLevel</see> specifing the required level of verification.</param>
+      <returns>A <see cref="T:Cobisi.EmailVerify.VerificationStateBag">VerificationStateBag</see> which contains a detailed state and status of the verification,
+            information about external mail exchangers and detected errors, if any.
+            </returns>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.Run(Cobisi.EmailVerify.Verification,Cobisi.EmailVerify.VerificationLevel)">
+      <summary>
+            Verifies an email address up to the given level.
+            </summary>
+      <param name="verification">A <see cref="T:Cobisi.EmailVerify.Verification">Verification</see> containing both inputs and, after
+            the method call, the outputs of the verification process.</param>
+      <param name="level">A <see cref="T:Cobisi.EmailVerify.VerificationLevel">VerificationLevel</see> specifing the required level of verification.</param>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.Run(Cobisi.EmailVerify.Verification,Cobisi.EmailVerify.ComponentModel.IVerificationStrategy{Cobisi.EmailVerify.VerificationSteps.VerificationStepResult,Cobisi.EmailVerify.VerificationSettings})">
+      <summary>
+            Verifies an email address using the specificed verification strategy.
+            </summary>
+      <param name="verification">A <see cref="T:Cobisi.EmailVerify.Verification">Verification</see> containing both inputs and, after
+            the method call, the outputs of the verification process.</param>
+      <param name="strategy">The strategy to use while processing the verification.</param>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.Run(Cobisi.EmailVerify.VerificationGroup,Cobisi.EmailVerify.VerificationLevel)">
+      <summary>
+            Verifies a group of email addresses up to the given level.
+            </summary>
+      <param name="verificationGroup">A <see cref="T:Cobisi.EmailVerify.VerificationGroup">VerificationGroup</see> containing the verifications to process.</param>
+      <param name="level">A <see cref="T:Cobisi.EmailVerify.VerificationLevel">VerificationLevel</see> specifing the required level of verification.</param>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.Run(Cobisi.EmailVerify.VerificationGroup,Cobisi.EmailVerify.ComponentModel.IVerificationStrategy{Cobisi.EmailVerify.VerificationSteps.VerificationStepResult,Cobisi.EmailVerify.VerificationSettings})">
+      <summary>
+            Verifies a group of email addresses using the specified verification strategy.
+            </summary>
+      <param name="verificationGroup">A <see cref="T:Cobisi.EmailVerify.VerificationGroup">VerificationGroup</see> containing the verifications to process.</param>
+      <param name="strategy">The strategy to use while processing the verification.</param>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.AdviseStrategyEvents(Cobisi.EmailVerify.ComponentModel.IVerificationStrategy{Cobisi.EmailVerify.VerificationSteps.VerificationStepResult,Cobisi.EmailVerify.VerificationSettings})">
+      <summary>
+            Establishes client notification of strategy events. This method is intended to be used by custom verification strategies
+            which need to properly wire up the events exposed by this type.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationEngine.UnadviseStrategyEvents(Cobisi.EmailVerify.ComponentModel.IVerificationStrategy{Cobisi.EmailVerify.VerificationSteps.VerificationStepResult,Cobisi.EmailVerify.VerificationSettings})">
+      <summary>
+            Detach client notifications for strategy events. This method is intended to be used by custom verification strategies
+            which need to properly unwire the events exposed by this type.
+            </summary>
+    </member>
+    <member name="E:Cobisi.EmailVerify.VerificationEngine.VerificationStarted">
+      <summary>
+            Occurs when the component starts processing a single verification task.
+            </summary>
+    </member>
+    <member name="E:Cobisi.EmailVerify.VerificationEngine.VerificationCompleted">
+      <summary>
+            Occurs when the component finished processing a single verification task.
+            </summary>
+    </member>
+    <member name="E:Cobisi.EmailVerify.VerificationEngine.VerificationLevelStarted">
+      <summary>
+            Occurs when the component starts processing a verification level for a single verification task.
+            </summary>
+    </member>
+    <member name="E:Cobisi.EmailVerify.VerificationEngine.VerificationLevelCompleted">
+      <summary>
+            Occurs when the component finished processing a verification level for a single verification task.
+            </summary>
+    </member>
+    <member name="E:Cobisi.EmailVerify.VerificationEngine.VerificationGroupStarted">
+      <summary>
+            Occurs when the component starts processing a group of related e-mail address verification tasks.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="E:Cobisi.EmailVerify.VerificationEngine.VerificationGroupProgressChanged">
+      <summary>
+            Occurs when a progress change happens while processing a group of related e-mail address verification tasks.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="E:Cobisi.EmailVerify.VerificationEngine.VerificationGroupCompleted">
+      <summary>
+            Occurs when the component finished processing a group of related e-mail address verification tasks.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="E:Cobisi.EmailVerify.VerificationEngine.LocalEndPointBinding">
+      <summary>
+            Occurs when the component needs to bind itself to a local endpoint, just before connecting to an external host.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="E:Cobisi.EmailVerify.VerificationEngine.SocketConnecting">
+      <summary>
+            Occurs when the component needs to configure a proxy server for its outgoing connections.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationEngine.DefaultSettings">
+      <summary>
+            Gets or sets the default settings for the component.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationEngine.MaxDegreeOfParallelism">
+      <summary>
+            Gets or sets the maximum number of concurrent validations a single <see cref="T:VerificationEngine">VerificationEngine</see> instance can handle.
+            <remarks>The setting exists predominantly to provide control for advanced usage.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationEngine.UseSynchronizationContext">
+      <summary>
+            Gets or sets a value that specifies whether to use the current synchronization context to choose the thread of execution.
+            The default is false, meaning events are fired directly, with no thread marshalling.
+            </summary>
+      <remarks>
+            Use this property to provide the user interface thread affinity that some applications require. For example, a Windows Forms application may be registered as a singleton service object.
+            In this case, all calls into the service must run on the Windows Forms thread. The default case, in which UseSynchronizationContext is set to <see langword="false" />, synchronizes all calls to the service to run in whatever thread
+            the component happens to run on, with no guarantee of being the user interface thread. In that case, you may want to set UseSynchronizationContext to <see langword="true" /> and have the component to fire events on the
+            user interface thread instead.
+            </remarks>
+    </member>
+    <member name="T:Cobisi.EmailVerify.LicensingManager">
+      <summary>
+            Allows to configure the license key for the product.
+            </summary>
+      <remarks>License keys can be retrieved from the clients area on the Cobisi website at <a href="https://cobisi.com/client-area">https://cobisi.com/client-area</a>
+            and can be applied to purchased, digitally-signed copies of the products only.</remarks>
+      <example>
+        <code source="..\..\Source\Cobisi.EmailVerify.ReferenceGuideSamplesCS\LicensingManagerSamples.cs" region="HowToUseLicensingManager" language="C#" />
+        <code source="..\..\Source\Cobisi.EmailVerify.ReferenceGuideSamplesVB\LicensingManagerSamples.vb" region="HowToUseLicensingManager" language="VB" />
+      </example>
+    </member>
+    <member name="M:Cobisi.EmailVerify.LicensingManager.SetLicenseKey(System.String)">
+      <summary>
+            Configures the license key for the component.
+            </summary>
+      <remarks>Please note that this static method must be invoked before using any other functionality of the library: ideally,
+            in the initialization module of your application. License keys can be retrieved from the clients area on the Cobisi website and can be
+            applied to purchased, digitally-signed copies of the products only.</remarks>
+      <example>
+        <code source="..\..\Source\Cobisi.EmailVerify.ReferenceGuideSamplesCS\LicensingManagerSamples.cs" region="HowToUseLicensingManager" language="C#" />
+        <code source="..\..\Source\Cobisi.EmailVerify.ReferenceGuideSamplesVB\LicensingManagerSamples.vb" region="HowToUseLicensingManager" language="VB" />
+      </example>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationLevelCompletedEventArgs">
+      <summary>
+            Provides data for the <see cref="E:Cobisi.EmailVerify.VerificationEngine.VerificationLevelCompleted" /> event of
+            the <see cref="T:Cobisi.EmailVerify.VerificationEngine">VerificationEngine</see> class.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationEventArgs">
+      <summary>
+            Provides data for the <see cref="E:Cobisi.EmailVerify.VerificationEngine.VerificationStarted">VerificationStarted</see> event of
+            the <see cref="T:Cobisi.EmailVerify.VerificationEngine">VerificationEngine</see> class.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationEventArgs.Verification">
+      <summary>
+            Gets the e-mail address verification verification which has been started.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationEventArgs.GeneratedOn">
+      <summary>
+            Returns the generation date and time of the related event.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationLevelCompletedEventHandler">
+      <summary>
+            Represents the method that will handle the <see cref="E:Cobisi.EmailVerify.VerificationEngine.VerificationLevelCompleted" /> event
+            of the <see cref="T:Cobisi.EmailVerify.VerificationEngine">VerificationEngine</see> class.
+            </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">A <see cref="T:Cobisi.EmailVerify.VerificationLevelCompletedEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationLevelStartedEventHandler">
+      <summary>
+            Represents the method that will handle the <see cref="E:Cobisi.EmailVerify.VerificationEngine.VerificationLevelStarted" /> event
+            of the <see cref="T:Cobisi.EmailVerify.VerificationEngine">VerificationEngine</see> class.
+            </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">A <see cref="T:Cobisi.EmailVerify.VerificationLevelStartedEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="T:Cobisi.EmailVerify.Strategies.ISocketConnector">
+      <summary>
+            Defines methods to establish TCP socket connections, eventually by way of a proxy server.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="M:Cobisi.EmailVerify.Strategies.ISocketConnector.EndConnect(System.IAsyncResult)">
+      <summary>
+            Ends an asynchronous connection operation initiated by one of the <see cref="M:BeginConnect" /> methods, blocking
+            until the operation completes.
+            </summary>
+      <param name="result">The value returned by one of the <see cref="M:BeginConnect" /> methods.</param>
+    </member>
+    <member name="T:Cobisi.EmailVerify.Strategies.ISocketConnectorException">
+      <summary>
+            Defines a method which allows to map an exception to its corresponding verification status.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="T:Cobisi.EmailVerify.Strategies.ISocketConnectorBinder">
+      <summary>
+            Defines methods to establish TCP socket connections, eventually by way of a proxy server.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationGroupEventHandler">
+      <summary>
+            Represents the method that will handle the <see cref="E:Cobisi.EmailVerify.VerificationEngine.VerificationGroupStarted" /> and the
+            <see cref="E:Cobisi.EmailVerify.VerificationEngine.VerificationGroupCompleted" /> events of the <see cref="T:Cobisi.EmailVerify.VerificationEngine">VerificationEngine</see> class.
+            </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">A <see cref="T:Cobisi.EmailVerify.VerificationGroupEventArgs" /> that contains the event data.</param>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationGroupEventArgs">
+      <summary>
+            Provides data for the <see cref="E:Cobisi.EmailVerify.VerificationEngine.VerificationGroupStarted" />, <see cref="E:Cobisi.EmailVerify.VerificationEngine.VerificationGroupProgressChanged" />
+            and <see cref="E:Cobisi.EmailVerify.VerificationEngine.VerificationGroupCompleted" /> events of the <see cref="T:Cobisi.EmailVerify.VerificationEngine" /> type.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationGroupEventArgs.Group">
+      <summary>
+            Gets the e-mail address verification verification which has been started.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationGroupEventArgs.GeneratedOn">
+      <summary>
+            Returns the generation date and time of the related event.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.Strategies.DefaultVerificationStrategy">
+      <summary>
+            The default email verification strategy of the product; contains the logic which rules which verification step comes after which other.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.Strategies.ILocalEndPointBinder">
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="M:Cobisi.EmailVerify.Strategies.DefaultVerificationStrategy.GetSocketConnector(Cobisi.EmailVerify.Verification,Cobisi.EmailVerify.VerificationSettings,System.Net.IPEndPoint)">
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationGroupStateBag">
+      <summary>
+            Represents an object repository which allows to save and retrieve the component state while
+            it validates a specific group of email addresses.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationGroupStateBag.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            This method is currently not supported.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationGroupStateBag.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+            This method is currently not supported.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationGroupStateBag.Status">
+      <summary>
+            Gets the <see cref="T:Cobisi.EmailVerify.VerificationGroupStatus">status</see> of the verification group.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationLevelStartedEventArgs">
+      <summary>
+            Provides data for the <see cref="E:Cobisi.EmailVerify.VerificationEngine.VerificationLevelStarted" /> and <see cref="E:Cobisi.EmailVerify.VerificationEngine.VerificationLevelCompleted" /> events of
+            the <see cref="T:Cobisi.EmailVerify.VerificationEngine">VerificationEngine</see> class.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationResult">
+      <summary>
+            Contains the results, if any, for each <see cref="T:Cobisi.EmailVerify.VerificationLevel">level of validation</see> the engine considered
+            for a particular <see cref="T:Cobisi.EmailVerify.Verification" /> instance.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationResult.EnqueueResult(Cobisi.EmailVerify.VerificationLevel,Cobisi.EmailVerify.VerificationLevelResult)">
+      <summary>
+            Enqueues a verification level and its result on their respective queues. This method should be used only
+            by classes which extend the default verification strategy of the component.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationResult.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            This method is currently not supported.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationResult.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+            Serializes this object into an XML document fragment.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationResult.LastLevelResult">
+      <summary>
+            Returns the <see cref="T:Cobisi.EmailVerify.VerificationLevelResult">result</see> of the last level of
+            validation the engine considered.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationResult.LastStatus">
+      <summary>
+            Returns the <see cref="T:Cobisi.EmailVerify.VerificationStatus">status</see> of the last level of validation
+            the engine considered.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationResult.LastLevel">
+      <summary>
+            Returns the last level of validation the engine considered.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationResult.AllLevels">
+      <summary>
+            Returns a sorted, enumerable collection with all the <see cref="T:Cobisi.EmailVerify.VerificationLevel">levels</see> of validation
+            the engine considered for a specific email address.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationResult.AllLevelResults">
+      <summary>
+            Returns a sorted, enumerable collection with all the <see cref="T:Cobisi.EmailVerify.VerificationLevelResult">results</see> of the
+            levels of validation the engine considered for a specific email address.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationResult.Item(Cobisi.EmailVerify.VerificationLevel)">
+      <summary>
+            An indexer which returns the <see cref="T:Cobisi.EmailVerify.VerificationStatus">status</see> of the first occurrence of a particular
+            verification level.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationLevelResult">
+      <summary>
+            Contains the status code and the eventual unhandled exceptions for a particular <see cref="T:Cobisi.EmailVerify.VerificationLevel">verification
+            level</see>.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationLevelResult.#ctor(Cobisi.EmailVerify.VerificationStatus)">
+      <summary>
+            Initialize a new <see cref="T:Cobisi.EmailVerify.VerificationLevelResult" /> instance, with an initial empty list of unhandled exceptions.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationLevelResult.#ctor(Cobisi.EmailVerify.VerificationStatus,System.Collections.Generic.IEnumerable{System.Exception})">
+      <summary>
+            Initialize a new <see cref="T:Cobisi.EmailVerify.VerificationLevelResult" /> instance.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationLevelResult.UnhandledExceptions">
+      <summary>
+            Gets the unhandled exceptions throw during the verification process for a particular level.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationLevelResult.Status">
+      <summary>
+            Gets the <see cref="T:Cobisi.EmailVerify.VerificationStatus">status code</see> returned for a particular level. The setter for this
+            property should only be used by custom extensions to the main email validation pipeline.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationStateBag">
+      <summary>
+            Represents an object repository which allows to save and retrieve the component state while
+            it validates email addresses.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationStateBag.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            This method is currently not supported.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationStateBag.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+            Serializes the known state bag properties of this instance into an XML document fragment.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationStateBag.Result">
+      <summary>
+            Returns the result of the verification.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationStateBag.CurrentLevel">
+      <summary>
+            Gets the current verification level for this verification state.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationStateBag.EmailAddress">
+      <summary>
+            Gets the plain email address, without comments and folding white space (FWS) sequences.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationStateBag.EmailAddressLocalPart">
+      <summary>
+            Gets the local part of the email address.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationStateBag.AsciiEmailAddressDomainPart">
+      <summary>
+            Gets the domain part of the email address in its ASCII representation.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationStateBag.EmailAddressDomainPart">
+      <summary>
+            Gets the domain part of the email address, with no conversion applied. See <see cref="P:Cobisi.EmailVerify.VerificationStateBag.AsciiEmailAddressDomainPart" />
+            for the ASCII representation of this value.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationStateBag.HasInternationalMailboxName">
+      <summary>
+            Returns <see langword="true">true</see> if the email address has a non-ASCII local part, <see langword="false">false</see>
+            otherwise. If this detail can't be determined, the return value is <see langword="null">null</see>.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationStateBag.HasInternationalDomainName">
+      <summary>
+            Returns <see langword="true">true</see> if the email address has a non-ASCII domain name, <see langword="false">false</see>
+            otherwise. If this detail can't be determined, the return value is <see langword="null">null</see>.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationStateBag.Comments">
+      <summary>
+            Gets an array of comment strings extracted from the email address, if any. If the email address being validated
+            does not have any comments, returns an empty array.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationStateBag.SyntaxFailureIndex">
+      <summary>
+            Returns the index of the first syntactic error of the input email address, if any. If the email address is syntactically valid, the return
+            value is <see langword="null">null</see>.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationStateBag.IsRoleAccount">
+      <summary>
+            Returns <see langword="true">true</see> if the local part of the email address is a well-known role account, <see langword="false">false</see>
+            otherwise. If this detail can't be determined, the return value is <see langword="null">null</see>.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationStateBag.IsDisposableEmailAddress">
+      <summary>
+            Returns <see langword="true">true</see> if the email address is temporary/disposable, <see langword="false">false</see>
+            otherwise. If this detail can't be determined, the return value is <see langword="null">null</see>.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationStateBag.MailExchangers">
+      <summary>
+            Returns an enumerable collection of mail exchangers (if any) the component collected while validating
+            the email address, provided the chosen level of validation supported this feature.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationStateBag.SmtpDialog">
+      <summary>Returns the SMTP dialog transcript for the validation or null if not present.</summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationStateBag.UnhandledExceptions">
+      <summary>
+            Returns an enumerable collection of exceptions which have been thrown while performing the validation.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.Exceptions.ComponentException">
+      <summary>
+            The base type for specific exceptions thrown by the component.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.Exceptions.VerificationGroupIsReadOnlyException">
+      <summary>
+            The exception that is thrown when the component detects an attempt to modify a <see cref="T:Cobisi.EmailVerify.VerificationGroup">verification task group</see>
+            while its validation is in progress.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="T:Cobisi.EmailVerify.Strategies.SocketConnectingEventArgs">
+      <summary>
+            Provides data for the <see cref="!:VerificationEngine.ProxyBinding">ProxyBinding</see> event of the
+            <see cref="T:Cobisi.EmailVerify.VerificationEngine">VerificationEngine</see> class and allows to specify different proxy servers to be used for
+            connecting to external IP end points, based on the running <see cref="P:Cobisi.EmailVerify.Strategies.SocketConnectingEventArgs.Verification">Verification</see>.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="P:Cobisi.EmailVerify.Strategies.SocketConnectingEventArgs.Verification">
+      <summary>
+            Gets the running <see cref="P:Cobisi.EmailVerify.Strategies.SocketConnectingEventArgs.Verification">Verification</see>.
+            </summary>
+      <remarks>The properties of this object are often used to determine which proxy server to use among a list
+            of available ones.</remarks>
+    </member>
+    <member name="P:Cobisi.EmailVerify.Strategies.SocketConnectingEventArgs.Settings">
+      <summary>
+            Gets the settings for the verification.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.Strategies.SocketConnectingEventArgs.TargetEndPoint">
+      <summary>
+            Gets the target IP end point that the component is going to connect to, including the target IP address and port.
+            </summary>
+      <remarks>This object is often used to determine which proxy server to use among a list
+            of available ones.</remarks>
+    </member>
+    <member name="P:Cobisi.EmailVerify.Strategies.SocketConnectingEventArgs.SocketConnector">
+      <summary>
+            Gets or sets the proxy server to use while connecting to the target end point.
+            </summary>
+      <remarks>The default value for this property is retrieved from the <see cref="!:VerificationEngine.Proxy">Proxy</see>
+            property of the <see cref="T:Cobisi.EmailVerify.VerificationEngine">VerificationEngine</see> class.</remarks>
+    </member>
+    <member name="T:Cobisi.EmailVerify.Strategies.SocketConnectingEventHandler">
+      <summary>
+            Represents the method that will handle the <see cref="!:VerificationEngine.ProxyBinding">ProxyBinding</see> event
+            of the <see cref="T:Cobisi.EmailVerify.VerificationEngine">VerificationEngine</see> class.
+            </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">A <see cref="T:Cobisi.EmailVerify.Strategies.SocketConnectingEventArgs">SocketConnectingEventArgs</see> object that contains the event data.</param>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="T:Cobisi.EmailVerify.Exceptions.LicenseException">
+      <summary>
+            The exception that is thrown when the component detects an invalid license.
+            </summary>
+      <exclude />
+    </member>
+    <member name="T:Cobisi.EmailVerify.LocalEndPointBindingEventHandler">
+      <summary>
+            Represents the method that will handle the <see cref="E:Cobisi.EmailVerify.VerificationEngine.LocalEndPointBinding">LocalEndPointBinding</see> event
+            of the <see cref="T:Cobisi.EmailVerify.VerificationEngine">VerificationEngine</see> class.
+            </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">A <see cref="T:Cobisi.EmailVerify.LocalEndPointBindingEventArgs">LocalEndPointBindingEventArgs</see> object that contains the event data.</param>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationSteps.VerificationStep">
+      <summary>
+            Provides base functionalities for verification steps.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationSteps.Dns.MailExchanger">
+      <summary>
+            Represents a mail exchanger for a given domain.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSteps.Dns.MailExchanger.HostName">
+      <summary>
+            The DNS host name of the mail exchanger.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSteps.Dns.MailExchanger.Addresses">
+      <summary>
+            Gets the IP addresses of the mail exchanger.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSteps.Dns.MailExchanger.Preference">
+      <summary>
+            The mail exchanger preference (if any), eventually read from the DNS MX record.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpCommand">
+      <summary>
+            Represents a command sent from the component to an external mail exchanger, during an SMTP dialog.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpMessage">
+      <summary>
+            Represents a message exchanged (sent or received) during an SMTP dialog.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpCommand.ToString">
+      <summary>
+            Returns a textual representation of the message.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpCommand.RawLine">
+      <summary>
+            Gets the raw line of the message, as sent by the component.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpDialog">
+      <summary>
+            Represents an SMTP dialog.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpDialog.ToString">
+      <summary>
+            Returns a textual representation for the entire SMTP dialog transcript.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpDialog.Messages">
+      <summary>
+            Gets the messages (<see cref="T:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpCommand">commands</see> and <see cref="T:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpReply">replies</see>) exchanged during an SMTP dialog,
+            ordered by their transmission/reception time.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpReply">
+      <summary>
+            Represents a reply received from an external mail exchanger during an SMTP dialog.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpReply.ToString">
+      <summary>
+            Returns a textual representation of all the lines of the reply.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpReply.ReplyLines">
+      <summary>
+            Gets the collection of lines pertaining to the reply.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpReply.IsSuccessful">
+      <summary>
+            Gets a value indicating whether the reply is successful or not.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpReply.IsPartial">
+      <summary>
+            Returns <see langword="true">true</see> if the SMTP reply requires additional lines to be complete and meaningful.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpReplyLine">
+      <summary>
+            Represents a single line of an <see cref="T:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpReply">SMTP reply</see>.
+            </summary>
+    </member>
+    <!-- Badly formed XML comment ignored for member "M:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpReplyLine.ToString" -->
+    <member name="P:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpReplyLine.Code">
+      <summary>
+            Gets the raw SMTP status code of the line.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpReplyLine.MoreLinesFollow">
+      <summary>
+            Gets a value indicating whether the component expects one or more lines after this one or not.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpReplyLine.RawLine">
+      <summary>
+            Gets the raw line of the reply, as received by the external mail exchanger.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpReplyLine.Message">
+      <summary>
+            Gets the message part of the reply line.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpStage">
+      <summary>
+            Specifies the different stages of the SMTP protocol where <see cref="T:Cobisi.EmailVerify.Exceptions.SmtpDialogException">dialog exceptions</see> may occur.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpStage.BeforeHelo">
+      <summary>
+            The first stage of the SMTP dialog, before sending the <see cref="F:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpStage.Helo">HELO</see> greeting.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpStage.Helo">
+      <summary>
+            The stage pertaining to the HELO command.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpStage.MailFrom">
+      <summary>
+            The stage pertaining to the MAIL FROM command.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpStage.RcptTo">
+      <summary>
+            The stage pertaining to the RCPT TO command.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationSteps.Smtp.SmtpStage.Quit">
+      <summary>
+            The stage pertaining to the QUIT command.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationSteps.VerificationStepResult">
+      <summary>
+            Contains the possible results a verification step can provide upon terminating its execution.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationSteps.VerificationStepResult.Continue">
+      <summary>
+            Instructs the verification engine to keep processing the email address under test.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationSteps.VerificationStepResult.Halt">
+      <summary>
+            Instructs the verification engine to terminate the processing of the email address under test.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationSettings">
+      <summary>
+            Contains the settings which rule the entire email validation process.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationSettings.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            This method is currently not implemented.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationSettings.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+            This method is currently not implemented.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.MailboxInspectionTimeout">
+      <summary>
+            Gets or sets the timeout for the inspection of the mailbox to complete. Inspections lasting more than this timeout will be automatically aborted and yield to the failure of the verification.
+            <remarks>The default timeout for mailbox inspection is 60 seconds (1 minute).</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.CatchAllValidationTimeout">
+      <summary>
+            Gets or sets the timeout for the catch-all verification to complete. Verification lasting more than this timeout will be automatically aborted and yield to the failure of the verification.
+            <remarks>The default timeout for catch-all verification is 10 seconds.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.SmtpConnectionTimeout">
+      <summary>
+            Gets or sets the timeout for the SMTP server to accepts a connection. Connection attempts lasting more than this timeout will be automatically aborted and yield to the failure of the verification.
+            <remarks>The default timeout for SMTP connections is 10 seconds.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.HttpsConnectionTimeout">
+      <summary>
+            The timeout for an external HTTPS server to accepts a connection. Connection attempts lasting more than this timeout will be automatically aborted and yield to the failure of the verification.
+            <remarks>The default timeout for HTTPS connections is 10 seconds.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.LocalHostFqdn">
+      <summary>
+            Gets or sets the fully qualified domain name (FQDN) of the local host, used to connect to external SMTP servers
+            while validating e-mail addresses.
+            <remarks>The default value for this property is the resolved DNS name for the local host.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.LocalSenderAddress">
+      <summary>
+            Gets or sets the local sender email address, used to connect to external SMTP servers
+            while validating e-mail addresses.
+            <remarks>The default value for this property is postmaster@host, where host is the value retrieved from <see cref="P:Cobisi.EmailVerify.VerificationSettings.LocalHostFqdn">LocalHostFqdn</see>.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.LocalEndPoint">
+      <summary>
+            Gets or sets the local endpoint, mostly used to connect to the external SMTP servers while validating email addresses.
+            <remarks>The default value for this property allows the component to use the first available IP address and port.
+            The Enterprise Edition of the component allows to change the local endpoint and possibly cycle among a list of available IP addresses by way of
+            the <see cref="E:Cobisi.EmailVerify.VerificationEngine.LocalEndPointBinding">LocalEndPointBinding event</see>.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.AllowDomainLiterals">
+      <summary>
+            Gets or sets a value indicating whether the component allows domain literals within the e-mail addresses
+            it validates.
+            <remarks>The default value is true, meaning the component accepts domain literals.</remarks><remarks>If this value is set to false, every domain literal would state in a failed verification.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.AllowInternationalDomainNames">
+      <summary>
+            Gets or sets a value indicating whether the component allows international domain names (IDN) labels within the e-mail addresses
+            it validates.
+            <remarks>The default value is true, meaning the component accepts international domain names.</remarks><remarks>If this value is set to false, every international domain name would state in a failed verification.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.AllowInternationalMailboxNames">
+      <summary>
+            Gets or sets a value indicating whether the component allows international mailbox names within the e-mail addresses
+            it validates, according to RFC 5336.
+            <remarks>The default value is true, meaning the component accepts international mailbox names.</remarks><remarks>If this value is set to false, every international mailbox name would state in a failed verification.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.AllowComments">
+      <summary>
+            Gets or sets a value indicating whether the component allows comments within the e-mail addresses
+            it validates.
+            <remarks>The default value is true, meaning the component accepts comments.</remarks><remarks>If this value is set to false, every comment would state in a failed verification.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.AllowQuotedStrings">
+      <summary>
+            Gets or sets a value indicating whether the component allows quoted strings (and, consequently, quoted pairs) within the e-mail addresses
+            it validates.
+            <remarks>The default value is true, meaning the component accepts quoted strings (and quoted pairs).</remarks><remarks>If this value is set to false, every quoted string would state in a failed verification.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.AllowFoldingWhiteSpaces">
+      <summary>
+            Gets or sets a value indicating whether the component allows folding white spaces (FWS) within the e-mail addresses
+            it validates.
+            <remarks>The default value is true, meaning the component accepts folding white spaces.</remarks><remarks>If this value is set to false, every white space would state in a failed verification.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.TreatDeaFailuresAsFatal">
+      <summary>
+            Gets or sets a value indicating whether the component will stop processing email addresses that fail while validating in
+            the <see cref="F:Cobisi.EmailVerify.VerificationLevel.DeaDomain">DeaDomain</see> or in the <see cref="F:Cobisi.EmailVerify.VerificationLevel.DeaMailExchanger">DeaMailExchanger</see>
+            validation levels or will keep verifying the upper validation levels as well.
+            <remarks>The default value is <see langword="true">true</see>, meaning a disposable email address will make the entire validation
+            fail with the <see cref="F:Cobisi.EmailVerify.VerificationStatus.DomainIsWellKnownDea">DomainIsWellKnownDea</see> or with the
+            <see cref="F:Cobisi.EmailVerify.VerificationStatus.MailExchangerIsWellKnownDea">MailExchangerIsWellKnownDea</see> status codes.</remarks></summary>
+      <seealso cref="P:Cobisi.EmailVerify.VerificationStateBag.IsDisposableEmailAddress" />
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.TreatRoleAccountFailuresAsFatal">
+      <summary>
+            Gets or sets a value indicating whether the component will stop processing email addresses that fail while validating in
+            the <see cref="F:Cobisi.EmailVerify.VerificationLevel.RoleAccount">RoleAccount</see> validation level or will keep verifying the upper validation levels as well.
+            <remarks>The default value is <see langword="false">false</see>, meaning a role account email address will not stop the whole validation.</remarks></summary>
+      <seealso cref="P:Cobisi.EmailVerify.VerificationStateBag.IsRoleAccount" />
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.SameDomainConnectionDelay">
+      <summary>
+            Gets or sets the delay for SMTP connections made against the same domain. Verifications which employ level Smtp or greater and made against the same domain will wait this interval between a connection and the subsequent, in order to lighten the external server load.
+            <remarks>The default delay for SMTP connections made against the same domain is 10 seconds.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.SameMailExchangerConnectionDelay">
+      <summary>
+            Gets or sets the delay for SMTP connections made against the same mail exchanger host. Verifications which employ level Smtp or greater and made against the same mail exchanger host will wait this interval between a connection and the subsequent, in order to lighten the external server load.
+            <remarks>The default delay for SMTP connections made against the same mail exchanger host is 30 seconds.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.SameMailExchangerAddressConnectionDelay">
+      <summary>
+            Gets or sets the delay for SMTP connections made against the same mail exchanger IP address. Verifications which employ level Smtp or greater and made against the same mail exchanger IP address will wait this interval between a connection and the subsequent, in order to lighten the external server load.
+            <remarks>The default delay for SMTP connections made against the same mail exchanger IP address is 1 minute.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.DnsQueryMaxRetriesCount">
+      <summary>
+            Gets or sets the number of times to retry querying the DNS when a connection failure or a timeout occurs.
+            <remarks>The default is 3 retries.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.DnsReceiveTimeout">
+      <summary>
+            Gets or sets the maximum allowed time to receive a response from the configured DNS server(s). Queries lasting more than this timeout will be automatically aborted and yield to the failure of the verification.
+            <remarks>The default timeout for DNS queries is 10 seconds.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.DnsSendTimeout">
+      <summary>
+            Gets or sets the maximum allowed time to send a request to the configured DNS server(s). Queries lasting more than this timeout will be automatically aborted and yield to the failure of the verification.
+            <remarks>The default timeout for DNS queries is 10 seconds.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.DnsServers">
+      <summary>
+            Gets the editable list of IP addresses of the DNS servers used during the verification phase.
+            <remarks>The default IP addresses are retrieved from the current system configuration.</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.UseYahooWebServices">
+      <summary>
+            Gets or sets a value indicating whether the component should use the Yahoo! identity web services to detect invalid
+            email IDs or should use the standard SMTP-based email validation strategy.
+            <remarks>The default value is true, meaning the component uses the Yahoo! identity web services, if needed.</remarks><remarks>If this value is set to false, the component does not use the Yahoo! identity web services, even if the target
+            email address is provided by Yahoo!</remarks></summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationSettings.SocketConnector">
+      <summary>
+            Gets or sets a proxy object used by the component for establishing connections to external machines, like Internet mail exchangers. While EmailVerify.NET allows to use custom
+            proxy types that derive from the <see cref="!:IProxyConnector">IProxyClient interface</see>, the <a href="http://cobisi.com/proxy-client/.net-component">Cobisi ProxyClient.NET</a>
+            library offers ready-made SOCKS 4, SOCKS 4a, SOCKS 5 and HTTP-CONNECT proxy server support and can be easily integrated by way of the same interface.
+            <remarks>The default value is null, meaning there is no configured proxy.</remarks></summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationEventHandler">
+      <summary>
+            Represents the method that will handle the <see cref="E:Cobisi.EmailVerify.VerificationEngine.VerificationStarted">VerificationStarted</see> event
+            of the <see cref="T:Cobisi.EmailVerify.VerificationEngine">VerificationEngine</see> class.
+            </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">A <see cref="!:VerificationEventArgs&lt;TVerification&gt;">VerificationEventArgs</see> that contains the event data.</param>
+    </member>
+    <member name="T:Cobisi.EmailVerify.LocalEndPointBindingEventArgs">
+      <summary>
+            Provides data for the <see cref="E:Cobisi.EmailVerify.VerificationEngine.LocalEndPointBinding">LocalEndPointBinding</see> event of the
+            <see cref="T:Cobisi.EmailVerify.VerificationEngine">VerificationEngine</see> class and allows to specify different local endpoints to be used for
+            connecting to external hosts, based on the running <see cref="P:Cobisi.EmailVerify.LocalEndPointBindingEventArgs.Verification">Verification</see>.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="P:Cobisi.EmailVerify.LocalEndPointBindingEventArgs.Verification">
+      <summary>
+            Gets the running <see cref="P:Cobisi.EmailVerify.LocalEndPointBindingEventArgs.Verification">Verification</see>.
+            </summary>
+      <remarks>The properties of this object are often used to determine which IP address to use among a list
+            of available ones.</remarks>
+    </member>
+    <member name="P:Cobisi.EmailVerify.LocalEndPointBindingEventArgs.LocalEndPoint">
+      <summary>
+            Gets or sets the local endpoint (an IP address and, optionally, a port) to use while binding locally, just
+            before connecting to an external host.
+            </summary>
+      <remarks>The default value for this property is retrieved from the <see cref="P:Cobisi.EmailVerify.VerificationSettings.LocalEndPoint">LocalEndPoint</see>
+            property of the <see cref="P:Cobisi.EmailVerify.VerificationEngine.DefaultSettings">default VerificationEngine settings</see> class.</remarks>
+    </member>
+    <member name="T:Cobisi.EmailVerify.Exceptions.ConfigurationException">
+      <summary>
+            The exception that is thrown when the component detects invalid data in its configuration.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationStatus">
+      <summary>
+            Provides enumerated values that specify the supported statuses of an e-mail address verification.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.CustomFailure">
+      <summary>
+            A failure code generated by a user-defined, custom verification level.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.NotSet">
+      <summary>
+            Unknown status, the verification may still be in progress.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.UnhandledException">
+      <summary>
+            One or more unhandled exceptions have been thrown during the verification process. Additional information may be retrieved
+            using the <see cref="P:Cobisi.EmailVerify.VerificationStateBag.UnhandledExceptions">UnhandledExceptions</see> property collection of the target <see cref="T:Cobisi.EmailVerify.VerificationStateBag">VerificationStateBag</see>.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.Success">
+      <summary>
+            The email address has been verified successfully up to the required level.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.UnmatchedQuotedPair">
+      <summary>
+            A quoted pair within a quoted word is not closed properly.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.UnexpectedQuotedPairSequence">
+      <summary>
+            An unexpected quoted pair sequence has been found within a quoted word.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.InvalidWordBoundaryStart">
+      <summary>
+            A new word boundary start has been detected at an invalid position.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.InvalidCharacterInSequence">
+      <summary>
+            An invalid character has been detected in the provided sequence.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.UnbalancedCommentParenthesis">
+      <summary>
+            The number of parenthesis used to open comments is not equal to the one used to close them.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.DoubleDotSequence">
+      <summary>
+            An invalid sequence of two adjacent dots has been found.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.InvalidLocalPartLength">
+      <summary>
+            The local part of the e-mail address has an invalid length.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.InvalidFoldingWhiteSpaceSequence">
+      <summary>
+            An invalid folding white space (FWS) sequence has been found.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.AtSignNotFound">
+      <summary>
+            The at sign symbol (@), used to separate the local part from the domain part of the address, has not been found.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.InvalidEmptyQuotedWord">
+      <summary>
+            An invalid quoted word with no content has been found.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.InvalidAddressLength">
+      <summary>
+            The email address has an invalid total length.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.DomainPartCompliancyFailure">
+      <summary>
+            The domain part of the email address is not compliant with the IETF standards.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.IspSpecificSyntaxFailure">
+      <summary>
+            The email address is not compliant with the additional syntax rules of the ISP which should eventually manage it.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.LocalPartIsWellKnownRoleAccount">
+      <summary>
+            The local part of the email address is a well-known role account.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.DnsQueryTimeout">
+      <summary>
+            A timeout has occurred while querying the DNS server(s) for records about the e-mail address domain.
+            </summary>
+      <remarks>If you receive this status too often try to increase the <see cref="P:Cobisi.EmailVerify.VerificationSettings.DnsSendTimeout">DnsSendTimeout</see>
+            and the <see cref="P:Cobisi.EmailVerify.VerificationSettings.DnsReceiveTimeout">DnsReceiveTimeout</see> properties values of the
+            <see cref="T:Cobisi.EmailVerify.VerificationSettings">VerificationSettings</see> class.</remarks>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.DnsConnectionFailure">
+      <summary>
+            Verification failed because of a socket connection error occurred while querying the DNS server.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.DomainDoesNotExist">
+      <summary>
+            The domain of the email address does not exist.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.DomainIsMisconfigured">
+      <summary>
+            The domain of the email address does not have any valid DNS record and couldn't accept messages from another
+            host on the Internet.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.DomainIsInexistent">
+      <summary>
+            Obsolete enum field, superseded by <see cref="F:Cobisi.EmailVerify.VerificationStatus.DomainDoesNotExist" />.
+            </summary>
+      <exclude />
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.DomainIsWellKnownDea">
+      <summary>
+            The email address is provided by a well known disposable email address provider (DEA).
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.MailExchangerIsWellKnownDea">
+      <summary>
+            The mail exchanger being tested is a well-known disposable email address provider (DEA).
+            </summary>
+    </member>
+    <!-- Badly formed XML comment ignored for member "F:Cobisi.EmailVerify.VerificationStatus.MailboxIsDea" -->
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.SmtpConnectionTimeout">
+      <summary>
+            A timeout has occurred while connecting to the mail exchanger which serves the e-mail address domain.
+            </summary>
+      <remarks>If you receive this status too often try to increase the <see cref="P:Cobisi.EmailVerify.VerificationSettings.SmtpConnectionTimeout">SmtpConnectionTimeout</see>
+            property value of the <see cref="T:Cobisi.EmailVerify.VerificationSettings">VerificationSettings</see> class.</remarks>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.SmtpConnectionFailure">
+      <summary>
+            A socket connection error occurred while connecting to the mail exchanger which serves the e-mail address domain.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.MailboxDoesNotExist">
+      <summary>
+            The mailbox for the e-mail address does not exist.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.MailboxConnectionFailure">
+      <summary>
+            Obsolete enum field.
+            </summary>
+      <exclude />
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.LocalSenderAddressRejected">
+      <summary>
+            The external mail exchanger rejected the address specified by the <see cref="P:Cobisi.EmailVerify.VerificationSettings.LocalSenderAddress">LocalSenderAddress</see> property
+            value of the <see cref="T:Cobisi.EmailVerify.VerificationSettings">VerificationSettings</see> class.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.MailboxValidationTimeout">
+      <summary>
+            A timeout occurred while verifying the existence of the mailbox.
+            </summary>
+      <remarks>If you receive this status too often try to increase the <see cref="P:Cobisi.EmailVerify.VerificationSettings.MailboxInspectionTimeout">MailboxInspectionTimeout</see>
+            value of the <see cref="T:Cobisi.EmailVerify.VerificationSettings">VerificationSettings</see> class.</remarks>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.MailboxTemporarilyUnavailable">
+      <summary>
+            The requested mailbox is temporarily unavailable.
+            <remarks>This is not an indicator that the mailbox actually exists but, often, a message sent by external mail exchangers with
+            <a ref="http://en.wikipedia.org/wiki/Greylisting">greylisting</a> enabled. To complete the validation of the address
+            you should re-process the verification with a small delay (usually 5-10 minutes), until the server answers with a different message.</remarks></summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.ServerDoesNotSupportInternationalMailboxes">
+      <summary>
+            The external mail exchanger does not support international mailbox names. To support this feature, mail exchangers must comply with
+            <a href="http://www.ietf.org/rfc/rfc5336.txt">RFC 5336</a> and support and announce both the 8BITMIME and the UTF8SMTP protocol extensions.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.CatchAllValidationTimeout">
+      <summary>
+            A timeout occurred while verifying fake e-mail address rejection for the mail server.
+            </summary>
+      <remarks>If you receive this status too often try to increase the <see cref="P:Cobisi.EmailVerify.VerificationSettings.CatchAllValidationTimeout">CatchAllValidationTimeout</see>
+            value of the <see cref="T:Cobisi.EmailVerify.VerificationSettings">VerificationSettings</see> class.</remarks>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.ServerIsCatchAll">
+      <summary>
+            The external mail exchanger accepts fake, non existent, e-mail addresses; therefore the provided e-mail address MAY be inexistent too.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.CatchAllConnectionFailure">
+      <summary>
+            A connection error occurred while verifying the external mail exchanger rejects inexistent e-mail addresses.
+            </summary>
+      <exclude />
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.HttpConnectionTimeout">
+      <summary>
+            A timeout has occurred while connecting to the HTTP(s) server (web mail) which serves the e-mail address domain.
+            </summary>
+      <remarks>If you receive this status too often try to increase the <see cref="P:Cobisi.EmailVerify.VerificationSettings.HttpsConnectionTimeout">HttpsConnectionTimeout</see>
+            property value of the <see cref="T:Cobisi.EmailVerify.VerificationSettings">VerificationSettings</see> class.</remarks>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.HttpConnectionFailure">
+      <summary>
+            A socket connection error occurred while connecting to the HTTP server (web mail) which serves the e-mail address domain.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.OperationCancelled">
+      <summary>
+            The asynchronous e-mail address verification was cancelled by using the <see cref="M:Cobisi.EmailVerify.VerificationEngine.CancelRun(System.IAsyncResult)">CancelRun(IAsyncResult)</see> method.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.SmtpDialogError">
+      <summary>
+            The external mail exchanger replied one or more non-standard SMTP lines and caused the SMTP session to be aborted.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationStatus.LocalEndPointRejected">
+      <summary>
+            The external mail exchanger rejected the local endpoint, probably because of its own policy rules.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.Verification">
+      <summary>
+            Represents an email verification and its features, including the address to verify, the settings to support
+            while performing the validation, and the state of the validation activity along with its results (if any).
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.Verification.#ctor(System.String,Cobisi.EmailVerify.VerificationSettings)">
+      <summary>
+            Constructs a new email verification.
+            </summary>
+      <param name="inputData">The email address to verify.</param>
+      <param name="settings">The set of features and options for this verification.</param>
+    </member>
+    <member name="M:Cobisi.EmailVerify.Verification.ToString">
+      <summary>
+            Returns a textual representation of the email address verification.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.Verification.InputData">
+      <summary>
+            Gets the email address to verify in this verification.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.Verification.Settings">
+      <summary>
+            Gets the settings for this verification.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.Verification.State">
+      <summary>
+            Gets the state of this verification.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.Exceptions.SmtpDialogException">
+      <summary>
+            The exception that is thrown when an unexpected SMTP reply from an external mail exchanger is detected.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.Exceptions.SmtpDialogException.Stage">
+      <summary>
+            The stage of the SMTP dialog where the exception occurs.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.Exceptions.SmtpDialogException.Reply">
+      <summary>
+            The SMTP reply which caused the exception to occur.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationLevel">
+      <summary>
+            Represents a verification level in the email validation pipeline.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationLevel.Syntax">
+      <summary>
+            Performs a syntactical validation of the email address against <a href="http://www.ietf.org/rfc/rfc2821.txt">RFC 2821</a>,
+            <a href="http://www.ietf.org/rfc/rfc2822.txt">RFC 2822</a>, <a href="http://www.ietf.org/rfc/rfc3696.txt">RFC 3696</a> and
+            <a href="http://www.ietf.org/rfc/rfc5321.txt">RFC 5321</a>.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationLevel.RoleAccount">
+      <summary>
+            Checks whether the local part of the email address is a well-known role account, like <code>postmaster</code>, <code>abuse</code>,
+            <code>sales</code>, etc.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationLevel.IspSpecificSyntax">
+      <summary>
+            Validates the email address against the specific syntactical rules of major Internet Service Providers.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationLevel.DeaDomain">
+      <summary>
+            Checks the domain of the email address against an internal list of well known <a href="http://en.wikipedia.org/wiki/Disposable_e-mail_address">disposable e-mail address</a>
+            (DEA) providers.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationLevel.Dns">
+      <summary>
+            Queries the configured DNS server(s) and looks for records about the email address domain and checks their validity and consistency.
+            <remarks>The collection of the DNS server(s) the component can query may be inspected and adjusted using the <see cref="P:Cobisi.EmailVerify.VerificationSettings.DnsServers">DnsServers</see>
+            property of the <see cref="T:Cobisi.EmailVerify.VerificationSettings">VerificationSettings</see> class.</remarks></summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationLevel.DeaMailExchanger">
+      <summary>
+            Checks the mail exchanger host against an internal list of well known <a href="http://en.wikipedia.org/wiki/Disposable_e-mail_address">disposable e-mail address</a>
+            (DEA) providers.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationLevel.Smtp">
+      <summary>
+            Checks if the mail exchanger responsible for the e-mail address can be contacted using the SMTP protocol.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationLevel.Mailbox">
+      <summary>
+            Checks if the mail exchanger responsible for the e-mail address actually recognizes it as a valid recipient.
+            </summary>
+    </member>
+    <member name="F:Cobisi.EmailVerify.VerificationLevel.CatchAll">
+      <summary>
+            Checks if the mail exchanger responsible for the e-mail address rejects invalid recipients.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationLevel.#ctor(System.String)">
+      <summary>
+            Constructs a new verification level, using the specified name. This members is useful in advanced scenarios where custom levels of
+            validation are needed. To just use one of the built-in validation levels, please refer to the static properties this type exposes.
+            </summary>
+      <param name="name">A custom string which identifies the verification level, for serialization purposes.</param>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationLevel.Name">
+      <summary>
+            Gets the name of the validation level, useful in some serialization scenarios.
+            </summary>
+    </member>
+    <member name="T:Cobisi.EmailVerify.VerificationGroup">
+      <summary>
+            Represents a group of related email address verifications.
+            </summary>
+      <remarks>This item is available only for the Enterprise Edition of the product.</remarks>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationGroup.#ctor">
+      <summary>
+            Constructs a new instance of a verification group that is empty.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationGroup.#ctor(System.Collections.Generic.IEnumerable{Cobisi.EmailVerify.Verification})">
+      <summary>
+            Constructs a new instance of a verification group that contains elements copied from the specified collection.
+            </summary>
+      <param name="verifications">The collection of <see cref="T:Cobisi.EmailVerify.Verification">Verification</see> whose elements are copied to the group.</param>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationGroup.Add(Cobisi.EmailVerify.Verification)">
+      <summary>
+            Add an e-mail address verification task to the group.
+            </summary>
+      <param name="verification">The <see cref="T:Cobisi.EmailVerify.Verification">Verification</see> to add to the group.</param>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationGroup.AddRange(System.Collections.Generic.IEnumerable{Cobisi.EmailVerify.Verification})">
+      <summary>
+            Add the specified verifications to the group.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationGroup.Clear">
+      <summary>
+            Removes all the e-mail address verification tasks contained in the group.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationGroup.Contains(Cobisi.EmailVerify.Verification)">
+      <summary>
+            Returns true if the specified e-mail address verification task is contained in the group.
+            </summary>
+      <param name="item">The <see cref="T:Cobisi.EmailVerify.Verification">Verification</see> to look for, within the group.</param>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationGroup.CopyTo(Cobisi.EmailVerify.Verification[],System.Int32)">
+      <summary>
+            Copies the e-mail address verification tasks contained in the group to a compatible one-dimension array, starting at the specified
+            index of the target array.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationGroup.Remove(Cobisi.EmailVerify.Verification)">
+      <summary>
+            Removes the specified e-mail address verification task from the group.
+            </summary>
+      <param name="item">The <see cref="T:Cobisi.EmailVerify.Verification">Verification</see> to remove.</param>
+      <returns>A value indicating whether the specified e-mail address verification task has been found and, subsequently,
+            removed from the group.</returns>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationGroup.GetEnumerator">
+      <summary>
+            Returns an enumerator that iterates through the group.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationGroup.IndexOf(Cobisi.EmailVerify.Verification)">
+      <summary>
+            Searches for the specified e-mail address verification task and returns the zero-based index of the first occurrence
+            within the group.
+            </summary>
+      <param name="item">The <see cref="T:Cobisi.EmailVerify.Verification">Verification</see> to look for, within the group.</param>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationGroup.Insert(System.Int32,Cobisi.EmailVerify.Verification)">
+      <summary>
+            Inserts an e-mail address verification task into the group at the specified index.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationGroup.RemoveAt(System.Int32)">
+      <summary>
+            Removes the e-mail address verification task at the specified index, within the group.
+            </summary>
+    </member>
+    <member name="M:Cobisi.EmailVerify.VerificationGroup.ToString">
+      <summary>
+            Returns a textual representation of the group.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationGroup.State">
+      <summary>
+            Gets a property bag for the verification group, useful to store custom state details.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationGroup.Count">
+      <summary>
+            Returns the number of e-mail address verification tasks contained in the group.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationGroup.IsReadOnly">
+      <summary>
+            Gets a value indicating whether the group is read-only.
+            </summary>
+    </member>
+    <member name="P:Cobisi.EmailVerify.VerificationGroup.Item(System.Int32)">
+      <summary>
+            Gets or sets an e-mail address verification task at the specified index, within the group.
+            </summary>
+    </member>
+  </members>
+</doc>

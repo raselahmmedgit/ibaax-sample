@@ -7,23 +7,10 @@
 //*********************************************************
 
 using System.IO;
-using EasySoft.Helper;
-using Core.Business.Helpers;
-using Core.Business.Repositories;
-using Core.Business.Repositories.AppEmail;
-using Core.Common;
-using Core.Common.ExceptionLogging;
-using Core.Data.Models;
-using Core.Data.ViewModels;
-using RB.Areas.TaskManagement.Controllers;
-using Kendo.Mvc.Extensions;
-using Kendo.Mvc.UI;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
-using RB.Helpers;
 
 namespace RB.Areas.TaskManagement.Controllers
 {

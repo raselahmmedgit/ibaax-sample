@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cobisi.EmailVerify;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
@@ -90,6 +91,65 @@ namespace lab.consoleapps
 
             Console.WriteLine("End");
             Console.Read();
+        }
+
+        public static void CobisiEmailVerify()
+        {
+            var settings = new VerificationSettings
+            {
+                AllowDomainLiterals = false,
+                AllowComments = true,
+                AllowQuotedStrings = true
+            };
+
+            // The component will use just the provided DNS server for its lookups
+
+            settings.DnsServers.Clear();
+            settings.DnsServers.Add(IPAddress.Parse("8.8.8.8"));
+
+            // Pass the configured settings to the verification engine
+
+            var result = Engine.Run("john@example.com",
+                                    VerificationLevel.Mailbox,
+                                    settings).Result;
+
+            VerificationEngine engine = new VerificationEngine();
+            engine.VerificationLevelCompleted += (sender, e) =>
+            {
+                switch (e.Level.Name.ToUpper())
+                {
+                    case "SYNTAX":
+                        if (e.Result.Status == VerificationStatus.Success) emailVerificationInfo.VerificationLevel = 1;
+                        break;
+
+                    case "DEADOMAIN":
+                        if (e.Result.Status == VerificationStatus.Success) emailVerificationInfo.VerificationLevel = 2;
+                        break;
+
+                    case "DNS":
+                        if (e.Result.Status == VerificationStatus.Success) emailVerificationInfo.VerificationLevel = 3;
+                        break;
+
+                    case "SMTP":
+                        if (e.Result.Status == VerificationStatus.Success) emailVerificationInfo.VerificationLevel = 4;
+                        break;
+
+                    case "MAILBOX":
+                        if (e.Result.Status == VerificationStatus.Success) emailVerificationInfo.VerificationLevel = 5;
+                        break;
+
+                    case "CATCHALL":
+                        if (e.Result.Status == VerificationStatus.Success) emailVerificationInfo.VerificationLevel = 6;
+                        break;
+                }
+            };
+            var result = engine.Run(PrimaryEmailAddress, Level);
+            emailVerificationInfo.IsAjax = true;
+            emailVerificationInfo.IsPositive = result.Result.LastStatus == VerificationStatus.Success;
+            emailVerificationInfo.IsVerified = emailVerificationInfo.VerificationLevel >= 5;
+            emailVerificationInfo.LastStatus = result.Result.LastStatus.ToString();
+
+            // ...
         }
 
         public static void SendMail(string subject, string body)

@@ -1,20 +1,10 @@
-﻿using EasySoft.Helper;
-using Core.Business.Helpers;
-using Core.Business.Repositories;
-using Core.Common;
-using RB.Controllers;
-using Core.Data.Models;
-using Core.Data.ViewModels;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Web.Mvc;
-using RB;
 
-namespace RB.Areas.TaskManagement.Controllers
+namespace lab.ngsample.Controllers
 {
     public class TaskManagementBaseController : BaseController
     {
-        
         #region Global Variable Declaration
 
         #endregion
