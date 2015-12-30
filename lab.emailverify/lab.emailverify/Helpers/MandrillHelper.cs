@@ -18,9 +18,9 @@ namespace lab.emailverify.Helpers
     {
         public static MVList<Mandrill.Messages.SendResult> SendEmail()
         {
-            var api = new MandrillApi(SiteConfigurationReader.MandrillApiKey);
+            var mandrillApi = new MandrillApi(SiteConfigurationReader.MandrillApiKey);
 
-            MailChimp.Types.Mandrill.UserInfo info = api.UserInfo();
+            MailChimp.Types.Mandrill.UserInfo info = mandrillApi.UserInfo();
 
             var recipients = new List<Mandrill.Messages.Recipient>();
 
@@ -46,7 +46,7 @@ namespace lab.emailverify.Helpers
 
             MVList<Mandrill.Messages.SendResult> result;
             //result = api.Send(message);
-            result = api.Send(message);
+            result = mandrillApi.Send(message);
             return result;
         }
 
