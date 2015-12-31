@@ -1,20 +1,11 @@
-using EasySoft.Helper;
-using Core.Business.Helpers;
-using Core.Business.Repositories;
-using Core.Common;
-using Core.Common.ExceptionLogging;
-using Core.Data.Models;
-using Kendo.Mvc;
-using Kendo.Mvc.Extensions;
-using Kendo.Mvc.UI;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Web.Mvc;
-using System.Linq;
+using lab.ngsample.Controllers;
 namespace RB.Areas.TaskManagement.Controllers
 {
-    public class TaskDocumentController : TaskManagementBaseController
+    public class TaskDocumentController : BaseController
     {
         #region Variable Declaration
 

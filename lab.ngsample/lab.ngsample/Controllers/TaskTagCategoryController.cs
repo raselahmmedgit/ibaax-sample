@@ -1,16 +1,10 @@
-using EasySoft.Helper;
-using Core.Business.Helpers;
-using Core.Business.Repositories;
-using Core.Common;
-using Core.Common.ExceptionLogging;
-using Core.Data.Models;
 using System;
 using System.Web.Mvc;
-using RB.Areas.TaskManagement.Controllers;
+using lab.ngsample.Controllers;
 
 namespace RB.Areas.TaskManagement.Controllers
 {
-    public class TaskTagCategoryController : TaskManagementBaseController
+    public class TaskTagCategoryController : BaseController
     {
         #region Variable Declaration
 

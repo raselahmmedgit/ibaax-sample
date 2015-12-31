@@ -2,22 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using Core.Business.Helpers;
-using Core.Business.Repositories;
-using Core.Business.Repositories.AppEmail;
-using EasySoft.Helper;
-using Core.Common;
-using Core.Common.ExceptionLogging;
-using Core.Data.Models;
-using Core.Data.ViewModels;
-using Kendo.Mvc.UI;
-using Kendo.Mvc;
-using Kendo.Mvc.Extensions;
-using RB.Areas.TaskManagement.Controllers;
+using lab.ngsample.Controllers;
 
 namespace RB.Areas.TaskManagement.Controllers
 {
-    public class TaskTeamController : TaskManagementBaseController
+    public class TaskTeamController : BaseController
     {
         #region Variable Declaration
 
