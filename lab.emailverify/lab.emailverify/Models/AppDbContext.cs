@@ -14,7 +14,9 @@ namespace lab.emailverify.Models
         public DbSet<Contact> Contact { get; set; }
 
         public DbSet<EmailVerification> EmailVerification { get; set; }
-        
+
+        public DbSet<Category> Category { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //modelBuilder.Entity<ContactJobTiteRatingStaffingRate>()

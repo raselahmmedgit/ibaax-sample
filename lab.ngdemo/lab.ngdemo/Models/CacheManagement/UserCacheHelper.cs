@@ -9,16 +9,17 @@ namespace lab.ngdemo.Models.CacheManagement
     public class UserCacheHelper
     {
         public CacheManager Cache { get; set; }
-        private AppDbContext _db = new AppDbContext();
-        List<User> _userList = new List<User>();
+
         public UserCacheHelper()
         {
             Cache = new CacheManager();
         }
+        
         public List<User> GetUsers
         {
             get
             {
+                List<User> _userList = new List<User>();
                 string appConstant = SiteConfigurationReader.GetAppSettingsString(Constants.CacheKey.DefaultCacheLifeTimeInMinute);
                 string cacheKey = Constants.CacheKey.UserList + appConstant;
                 if (!CacheManager.ICache.IsSet(cacheKey))
@@ -51,61 +52,72 @@ namespace lab.ngdemo.Models.CacheManagement
             return user;
         }
 
-        public User AddUser(User user)
+        public void AddUser(User user)
         {
             string appConstant = SiteConfigurationReader.GetAppSettingsString(Constants.CacheKey.DefaultCacheLifeTimeInMinute);
-            string cacheKey = Constants.CacheKey.UserAdd + appConstant;
-            if (!CacheManager.ICache.IsSet(cacheKey))
+            //string cacheKey = Constants.CacheKey.UserAdd + appConstant;
+
+            List<User> _userList = new List<User>();
+            _userList = GetUsers.ToList();
+            _userList.Add(user);
+
+            string cacheKeyList = Constants.CacheKey.UserList + appConstant;
+            if (CacheManager.ICache.IsSet(cacheKeyList))
             {
-                _userList.Add(user);
-
-                string cacheKeyList = Constants.CacheKey.UserList + appConstant;
-                if (!CacheManager.ICache.IsSet(cacheKeyList))
-                {
-                    CacheManager.ICache.Set(cacheKeyList, _userList);
-                }
-                else
-                {
-                    _userList = CacheManager.ICache.Get(cacheKeyList) as List<User>;
-                }
-
-                CacheManager.ICache.Set(cacheKey, user);
+                CacheManager.ICache.Remove(cacheKeyList);
+                CacheManager.ICache.Set(cacheKeyList, _userList);
             }
             else
             {
-                user = CacheManager.ICache.Get(cacheKey) as User;
+                CacheManager.ICache.Set(cacheKeyList, _userList);
             }
-            return user;
+
         }
 
-        public User EditUser(User user)
+        public void EditUser(User user)
         {
             string appConstant = SiteConfigurationReader.GetAppSettingsString(Constants.CacheKey.DefaultCacheLifeTimeInMinute);
-            string cacheKey = Constants.CacheKey.UserEdit + appConstant;
-            if (!CacheManager.ICache.IsSet(cacheKey))
-            {
-                var userRemove = GetUsers.FirstOrDefault(item => item.UserName == user.UserName);
-                GetUsers.Remove(userRemove);
+            //string cacheKey = Constants.CacheKey.UserEdit + appConstant;
 
-                CacheManager.ICache.Set(cacheKey, user);
+            List<User> _userList = new List<User>();
+            _userList = GetUsers.ToList();
+            var editUser = _userList.FirstOrDefault(item => item.UserName == user.UserName);
+            editUser = user;
+
+            string cacheKeyList = Constants.CacheKey.UserList + appConstant;
+            if (CacheManager.ICache.IsSet(cacheKeyList))
+            {
+                CacheManager.ICache.Remove(cacheKeyList);
+                CacheManager.ICache.Set(cacheKeyList, _userList);
             }
             else
             {
-                user = CacheManager.ICache.Get(cacheKey) as User;
+                CacheManager.ICache.Set(cacheKeyList, _userList);
             }
-            return user;
+
         }
 
         public void DeleteUser(User user)
         {
             string appConstant = SiteConfigurationReader.GetAppSettingsString(Constants.CacheKey.DefaultCacheLifeTimeInMinute);
-            string cacheKey = Constants.CacheKey.UserDelete + appConstant;
-            if (!CacheManager.ICache.IsSet(cacheKey))
+            //string cacheKey = Constants.CacheKey.UserDelete + appConstant;
+
+            List<User> _userList = new List<User>();
+            _userList = GetUsers.ToList();
+            var userRemove = _userList.FirstOrDefault(item => item.UserName == user.UserName);
+            _userList.Remove(userRemove);
+
+            string cacheKeyList = Constants.CacheKey.UserList + appConstant;
+            if (CacheManager.ICache.IsSet(cacheKeyList))
             {
-                var userRemove = GetUsers.FirstOrDefault(item => item.UserName == user.UserName);
-                GetUsers.Remove(userRemove);
-                CacheManager.ICache.Remove(cacheKey);
+                CacheManager.ICache.Remove(cacheKeyList);
+                CacheManager.ICache.Set(cacheKeyList, _userList);
             }
+            else
+            {
+                CacheManager.ICache.Set(cacheKeyList, _userList);
+            }
+
         }
     }
 }

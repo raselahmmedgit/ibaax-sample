@@ -24,15 +24,23 @@ namespace lab.emailverify.Helpers
 
             var recipients = new List<Mandrill.Messages.Recipient>();
 
-            var name = string.Format("{0} {1}", "Rasel", "Ahmmed");
+            //recipients.Add(new Mandrill.Messages.Recipient("raselahmmed@gmail.com", ""));
+            //recipients.Add(new Mandrill.Messages.Recipient("shafi.rahman2016@hotmail.com", ""));
+            recipients.Add(new Mandrill.Messages.Recipient("mahbubrobin@outlook.com", ""));
+            //recipients.Add(new Mandrill.Messages.Recipient("hasib.hasan@gmail.com", ""));
 
-            recipients.Add(new Mandrill.Messages.Recipient("raselahmmed@gmail.com", name));
-            //recipients.Add(new Mandrill.Messages.Recipient("rasel.bappi@gmail.com", "Rasel Bappi"));
+            var headerItem = new MCDict<Mandrill.Messages.Header>();
+            headerItem.Add("Reply-To", "rasel.bappi@hotmail.com");
+            var headers = new Opt<MCDict<Mandrill.Messages.Header>>(headerItem);
 
             var message = new Mandrill.Messages.Message()
             {
+                Headers = headers,
+                Important = true,
+                AutoHtml = true,
                 To = recipients.ToArray(),
-                FromEmail = "rasel@ibaax.com",
+                FromEmail = "noreply@ibaax.com",
+                FromName = "no reply, ibaax.com",
                 Subject = "Mandrill: Test Email Subject",
                 Html = "<div>Dear Sir,<br/> This is email body.<br/> Happy Programing</div>",
                 Text = "This is test."

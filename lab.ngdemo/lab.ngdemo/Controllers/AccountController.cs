@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using lab.ngdemo.Helpers;
+using lab.ngdemo.Models.CacheManagement;
 using lab.ngdemo.ViewModels;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
@@ -21,6 +22,8 @@ namespace lab.ngdemo.Controllers
     public class AccountController : Controller
     {
         private AppDbContext _db = new AppDbContext();
+        private UserCacheHelper _userCacheHelper = new UserCacheHelper();
+        private RoleCacheHelper _roleCacheHelper = new RoleCacheHelper();
         //
         // GET: /Account/LogOn
 
@@ -37,18 +40,29 @@ namespace lab.ngdemo.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (Membership.ValidateUser(model.UserName, model.Password))
+                lab.ngdemo.Models.User user = _db.Users.Find(model.UserName);
+
+                if (user != null)
                 {
-                    FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
-                    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
-                        && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+
+                    if (Membership.ValidateUser(model.UserName, model.Password))
                     {
-                        return Redirect(returnUrl);
+                        FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
+                        if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
+                            && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+                        {
+                            return Redirect(returnUrl);
+                        }
+                        else
+                        {
+                            return RedirectToAction("Index", "Home");
+                        }
                     }
                     else
                     {
-                        return RedirectToAction("Index", "Home");
+                        ModelState.AddModelError("", "The user name or password provided is incorrect.");
                     }
+
                 }
                 else
                 {
@@ -75,7 +89,7 @@ namespace lab.ngdemo.Controllers
 
         public ActionResult Register()
         {
-            var registerViewModel = new RegisterViewModel {};
+            var registerViewModel = new RegisterViewModel { };
 
             return View(registerViewModel);
         }
@@ -86,7 +100,7 @@ namespace lab.ngdemo.Controllers
         [HttpPost]
         public ActionResult Register(RegisterViewModel model)
         {
-            
+
             if (ModelState.IsValid)
             {
                 // Attempt to register the user
@@ -95,12 +109,18 @@ namespace lab.ngdemo.Controllers
 
                 if (createStatus == MembershipCreateStatus.Success)
                 {
-                    lab.ngdemo.Models.User user = _db.Users.Find(model.UserName);
-                    lab.ngdemo.Models.Role role = _db.Roles.Find("User");
+                    //lab.ngdemo.Models.User user = _db.Users.Find(model.UserName);
+                    //lab.ngdemo.Models.Role role = _db.Roles.Find("User");
+                    //user.Roles = new List<Role> { role };
+
+                    //_db.Entry(user).State = EntityState.Modified;
+                    //_db.SaveChanges();
+
+                    lab.ngdemo.Models.User user = _userCacheHelper.GetUser(model.UserName);
+                    lab.ngdemo.Models.Role role = _roleCacheHelper.GetRole("User");
                     user.Roles = new List<Role> { role };
 
-                    _db.Entry(user).State = EntityState.Modified;
-                    _db.SaveChanges();
+                    _userCacheHelper.EditUser(user);
 
                     FormsAuthentication.SetAuthCookie(model.UserName, false /* createPersistentCookie */);
                     return RedirectToAction("Index", "Home");
@@ -209,5 +229,5 @@ namespace lab.ngdemo.Controllers
         }
         #endregion
     }
-        
+
 }

@@ -66,10 +66,11 @@ namespace lab.exportfile.Controllers
         protected FileContentResult ViewPdf(string pageTitle, string viewName, object model)
         {
             // Render the view html to a string.
-            string htmlText = HtmlViewRenderer.RenderViewToString(this, viewName, model);
+            //string htmlText = HtmlViewRenderer.RenderViewToString(this, viewName, model);
 
             // Let the html be rendered into a PDF document through iTextSharp.
-            byte[] buffer = standardPdfRenderer.Render(htmlText, pageTitle);
+            //byte[] buffer = standardPdfRenderer.Render(htmlText, pageTitle);
+            byte[] buffer = new byte[] {};
 
             // Return the PDF as a binary stream to the client.
             return File(buffer, "application/pdf", "file.pdf");

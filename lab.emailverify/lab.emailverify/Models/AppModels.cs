@@ -117,4 +117,44 @@ namespace lab.emailverify.Models
         public virtual EmailVerificationLevel EmailVerificationLevel { get { return (EmailVerificationLevel)VerificationLevel; } }
     }
 
+    public class Category : BaseModel
+    {
+        [Key]
+        public int CategoryId { get; set; }
+        [DisplayName("Category Name")]
+        [Required(ErrorMessage = "Category Name is required")]
+        [MaxLength(200)]
+        public string Name { get; set; }
+
+        [DisplayName("Create Date")]
+        //[DataType(DataType.Date)]
+        //[DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = false)]
+        //[DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
+        //[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        //[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true, ConvertEmptyStringToNull = false)]
+        //[DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true, ConvertEmptyStringToNull = false)]
+        //[DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true, ConvertEmptyStringToNull = true, HtmlEncode = false)]
+        public DateTime CreateDate { get; set; }
+
+        //[NotMapped]
+        //public string CreateDateValue
+        //{
+        //    get
+        //    {
+        //        return this.CreateDateValue;
+        //    }
+        //    set
+        //    {
+        //        if (this.CreateDate != null)
+        //        {
+        //            this.CreateDateValue = this.CreateDate.ToString(GetCustomDateFormat());
+        //        }
+        //    }
+        //}
+
+        //private string GetCustomDateFormat()
+        //{
+        //    return "{0:dd-MMM-yyyy}";
+        //}
+    }
 }
